@@ -6,6 +6,7 @@ import TextField from "@material-ui/core/TextField";
 import * as emailjs from "emailjs-com";
 import React, { useState } from "react";
 import { CONFIG, IEmailJSTemplate } from "../api/config";
+import SimpleSnackbar from "./SimpleSnackbar";
 
 const useStyles = makeStyles(theme => ({
     paper: {
@@ -28,6 +29,15 @@ const ContactForm = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [open, setOpen] = React.useState(false);
+    const [sendSuccess, setSendSuccess] = React.useState(false);
+    const handleSubmit = async (
+        event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+    ) => {
+        const sendSuccessful = await sendEmail(event, name, email, message);
+        setSendSuccess(sendSuccessful);
+        setOpen(true);
+    };
 
     return (
         <Container component="main" maxWidth="xs">
@@ -77,14 +87,17 @@ const ContactForm = () => {
                         variant="contained"
                         color="primary"
                         className={classes.submit}
-                        onClick={event =>
-                            sendEmail(event, name, email, message)
-                        }
+                        onClick={handleSubmit}
                     >
                         Send
                     </Button>
                 </form>
             </div>
+            <SimpleSnackbar
+                open={open}
+                onClose={() => setOpen(false)}
+                variant={sendSuccess ? "success" : "error"}
+            />
         </Container>
     );
 };
@@ -102,19 +115,17 @@ const sendEmail = async (
     const templateId = CONFIG.emailJs.templateId;
     const userId = CONFIG.emailJs.userId;
     const templateParams: IEmailJSTemplate = { name, email, message };
-    await emailjs.init(userId);
-
-    await emailjs.send(serviceId, templateId, templateParams).then(
-        function(response: any) {
-            console.log(
-                "email sending success",
-                response.status,
-                response.text
-            );
-        },
-        function(err: Error) {
-            console.log("email sending failed", err, err.message);
-        }
-    );
-    alert(`Email sending successful! Thanks for your email, ${name}.`);
+    try {
+        await emailjs.init(userId);
+        const response = await emailjs.send(
+            serviceId,
+            templateId,
+            templateParams
+        );
+        console.log("email sending success", response.status, response.text);
+        return true;
+    } catch (err) {
+        console.log("email sending failed", err, err.message);
+        return false;
+    }
 };
