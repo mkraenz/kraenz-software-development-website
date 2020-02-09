@@ -1,4 +1,4 @@
-import { Grid } from "@material-ui/core";
+import { Grid, Theme, useMediaQuery } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
@@ -7,14 +7,13 @@ import React from "react";
 
 const useStyles = makeStyles(theme => ({
     container: {
-        backgroundColor: theme.palette.primary.main,
-        minHeight: 300,
         width: "100%",
         marginTop: "30vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
     },
+    xsContainer: { marginTop: "80px" },
     buttonContainer: {
         justifyContent: "space-evenly",
         margin: theme.spacing(5, 0, 1),
@@ -24,12 +23,14 @@ const useStyles = makeStyles(theme => ({
 
 const HeroUnit: React.FunctionComponent = () => {
     const classes = useStyles({});
+    const isXs = useMediaQuery((theme: Theme) => theme.breakpoints.down("xs"));
 
     return (
         <Container
             maxWidth={false}
             component="main"
             className={classes.container}
+            classes={{ root: isXs ? classes.xsContainer : undefined }}
         >
             <div>
                 <Typography
@@ -41,12 +42,7 @@ const HeroUnit: React.FunctionComponent = () => {
                 >
                     Kraenz Software Development
                 </Typography>
-                <Typography
-                    variant="h5"
-                    align="center"
-                    color="textSecondary"
-                    component="p"
-                >
+                <Typography variant="h5" align="center" component="p">
                     High Quality Web Development for you.
                 </Typography>
                 <Grid container className={classes.buttonContainer}>

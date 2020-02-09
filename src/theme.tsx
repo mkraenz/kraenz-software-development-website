@@ -1,37 +1,27 @@
-import grey from "@material-ui/core/colors/grey";
-import red from "@material-ui/core/colors/red";
+import { lightGreen } from "@material-ui/core/colors";
 import { createMuiTheme } from "@material-ui/core/styles";
 
 enum Color {
-    LightBlue = "#D1E8E2",
-    DarkBlue = "#116466",
-    DarkBlueTransparent = "rgb(17, 100, 102, 0.15)",
-    LightBeige = "#FFCB9A",
-    DarkBeige = "#D9B08C",
-    DarkGrey = "#2C3531",
-    DarkGreyTransparent = "rgb(44, 53, 49, 0.3)",
     White = "#fff",
+    Green = "#8bc34a",
+    DarkGreen = "#5a9216",
+    LightGreen = "#bef67a",
+    Yellow = "#fcfc10",
 }
 
 // Create a theme instance.
 const theme = createMuiTheme({
     palette: {
         primary: {
-            // main: '#556cd6',
-            main: Color.DarkGreyTransparent,
+            light: Color.LightGreen,
+            main: lightGreen[500],
+            dark: Color.DarkGreen,
         },
-        secondary: {
-            main: Color.White,
-        },
-        error: {
-            main: red.A400,
+        text: {
+            primary: "rgb(0, 0, 0, 0.6)",
         },
         background: {
             default: Color.White,
-        },
-        text: {
-            primary: grey[400],
-            secondary: grey[500],
         },
     },
     typography: {

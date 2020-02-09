@@ -10,6 +10,9 @@ import { isProductionBrowser } from "../src/isProductionBrowser";
 import { makeStore } from "../src/redux/store";
 import theme from "../src/theme";
 
+const websiteTitle = "Kraenz Software Development";
+const googleAnalyticsId = "FAKE ID"; // TODO create a new app
+
 class MyApp extends App<{ store: ReturnType<typeof makeStore> }> {
     componentDidMount() {
         // Remove the server-side injected CSS.
@@ -26,7 +29,7 @@ class MyApp extends App<{ store: ReturnType<typeof makeStore> }> {
         return (
             <React.Fragment>
                 <Head>
-                    <title>Kraenz Software Development</title>
+                    <title>{websiteTitle}</title>
                     {process.browser && (
                         <script type="text/javascript" id="hotjar">
                             {/* {initHotjar() as any} */}
@@ -50,7 +53,7 @@ export default withRedux(makeStore as any)(MyApp);
 const initGoogleAnalytics = () => {
     if (isProductionBrowser) {
         ReactGA.set({ anonymizeIp: true });
-        ReactGA.initialize("UA-145441270-2");
+        ReactGA.initialize(googleAnalyticsId);
         ReactGA.pageview(window.location.pathname + window.location.search);
     }
 };

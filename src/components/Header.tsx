@@ -69,13 +69,13 @@ const Header: React.FunctionComponent = () => {
                             href={externalLinks.github}
                             className={classes.link}
                         >
-                            <GitHubIcon color="secondary" />
+                            <GitHubIcon />
                         </IconButton>
                         <IconButton
                             href={externalLinks.linkedIn}
                             className={classes.link}
                         >
-                            <LinkedIn color="secondary" />
+                            <LinkedIn />
                         </IconButton>
                     </Toolbar>
                 </Container>
@@ -118,13 +118,13 @@ const Header: React.FunctionComponent = () => {
                         href={externalLinks.github}
                         className={classes.link}
                     >
-                        <GitHubIcon color="secondary" />
+                        <GitHubIcon />
                     </IconButton>
                     <IconButton
                         href={externalLinks.linkedIn}
                         className={classes.link}
                     >
-                        <LinkedIn color="secondary" />
+                        <LinkedIn />
                     </IconButton>
                 </Toolbar>
             </Container>
