@@ -23,7 +23,6 @@ export const content = {
         {
             title: "Legal",
             description: [
-                { href: "/acknowledgement", title: "Acknowledgement" },
                 { href: "/imprint", title: "Imprint and Privacy policy" },
             ],
         },
@@ -32,8 +31,8 @@ export const content = {
             description: [
                 { href: "https://phaser.io/phaser3", title: "Phaser 3" },
                 {
-                    href: "https://inkarnate.com/",
-                    title: "Inkarnate",
+                    href: "https://material-ui.com/",
+                    title: "Material-UI",
                 },
             ],
         },
