@@ -1,19 +1,19 @@
-import { Grid, Theme, useMediaQuery } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
+import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
+import { content } from "../content";
 
 const useStyles = makeStyles(theme => ({
     container: {
         width: "100%",
-        marginTop: "30vh",
-        display: "flex",
-        alignItems: "center",
+        height: "90vh",
         justifyContent: "center",
+        alignItems: "center",
+        display: "flex",
     },
-    xsContainer: { marginTop: "80px" },
     buttonContainer: {
         justifyContent: "space-evenly",
         margin: theme.spacing(5, 0, 1),
@@ -23,15 +23,8 @@ const useStyles = makeStyles(theme => ({
 
 const HeroUnit: React.FunctionComponent = () => {
     const classes = useStyles({});
-    const isXs = useMediaQuery((theme: Theme) => theme.breakpoints.down("xs"));
-
     return (
-        <Container
-            maxWidth={false}
-            component="main"
-            className={classes.container}
-            classes={{ root: isXs ? classes.xsContainer : undefined }}
-        >
+        <Container maxWidth={false} className={classes.container}>
             <div>
                 <Typography
                     component="h1"
@@ -40,20 +33,28 @@ const HeroUnit: React.FunctionComponent = () => {
                     color="textPrimary"
                     gutterBottom
                 >
-                    Kraenz Software Development
+                    {content.title}
                 </Typography>
                 <Typography variant="h5" align="center" component="p">
                     High Quality Web Development for you.
                 </Typography>
                 <Grid container className={classes.buttonContainer}>
                     <Grid item className={classes.button}>
-                        <Button variant="contained" color="secondary">
-                            Contact
+                        <Button
+                            variant="contained"
+                            color="secondary"
+                            href="#contact"
+                        >
+                            {content.contact.header}
                         </Button>
                     </Grid>
                     <Grid item className={classes.button}>
-                        <Button variant="contained" color="secondary">
-                            LinkedIn
+                        <Button
+                            variant="outlined"
+                            color="secondary"
+                            href={content.urls.linkedIn}
+                        >
+                            {content.landingPageSecondaryButton}
                         </Button>
                     </Grid>
                 </Grid>

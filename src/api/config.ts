@@ -6,10 +6,11 @@ export const CONFIG = {
         : "http://localhost:3140/prod/levels",
     emailJs: {
         serviceId: "default_service",
-        templateId: "template_NpJqyVwR",
-        userId: "user_8Ocz3CMyCfVJCUSNA3S7k",
+        templateId: "template_QsOH5koE",
+        userId: "user_BsXgSjnZ05nGtNjMvebDF",
     },
     gameUrl: "https://prosingularity.github.io/fursorger/",
+    googleAnalyticsId: "FAKE ID", // TODO create a new app
 };
 
 export interface IEmailJSTemplate {

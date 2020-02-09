@@ -9,6 +9,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedIn from "@material-ui/icons/LinkedIn";
 import React from "react";
+import { content } from "../content";
 
 const useStyles = makeStyles(theme => ({
     appBar: {
@@ -27,15 +28,10 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const title = "Kraenz Software Development";
 const data = [
-    { href: "#Skills", title: "Skills" },
-    { href: "#Contact", title: "Contact" },
+    { href: "#skills", title: "Skills" },
+    { href: content.contact.href, title: content.contact.header },
 ];
-const externalLinks = {
-    github: "https://github.com/proSingularity/",
-    linkedIn: "https://www.linkedin.com/in/mirco-kraenz/",
-};
 
 const Header: React.FunctionComponent = () => {
     const classes = useStyles({});
@@ -66,13 +62,13 @@ const Header: React.FunctionComponent = () => {
                             ))}
                         </nav>
                         <IconButton
-                            href={externalLinks.github}
+                            href={content.urls.github}
                             className={classes.link}
                         >
                             <GitHubIcon />
                         </IconButton>
                         <IconButton
-                            href={externalLinks.linkedIn}
+                            href={content.urls.linkedIn}
                             className={classes.link}
                         >
                             <LinkedIn />
@@ -98,7 +94,7 @@ const Header: React.FunctionComponent = () => {
                         className={classes.toolbarTitle}
                     >
                         <Link color="textPrimary" href="/">
-                            {title}
+                            {content.title}
                         </Link>
                     </Typography>
                     <nav>
@@ -115,13 +111,13 @@ const Header: React.FunctionComponent = () => {
                         ))}
                     </nav>
                     <IconButton
-                        href={externalLinks.github}
+                        href={content.urls.github}
                         className={classes.link}
                     >
                         <GitHubIcon />
                     </IconButton>
                     <IconButton
-                        href={externalLinks.linkedIn}
+                        href={content.urls.linkedIn}
                         className={classes.link}
                     >
                         <LinkedIn />

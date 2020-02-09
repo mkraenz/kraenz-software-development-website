@@ -1,6 +1,7 @@
 import Container from "@material-ui/core/Container";
 import React from "react";
 import Layout from "../src/components/Layout";
+import { content } from "../src/content";
 
 export default () => {
     return (
@@ -16,10 +17,10 @@ const Imprint: React.FunctionComponent = () => {
             <h1 className="adsimple-321139178">Impressum</h1>
             <p className="adsimple-321139178">Informationspflicht laut § 5 TMG.</p>
             <p className="adsimple-321139178"></p>
-            <p>Mirco Kraenz</p>
-            <p className="adsimple-321139178">Sterndamm 34, <br />12487 Berlin, <br />Deutschland</p>
+            <p>{content.address.name}</p>
+            <p className="adsimple-321139178">{content.address.street}<br />{content.address.city}<br />{content.address.country}</p>
             <p className="adsimple-321139178">
-            <strong>E-Mail:</strong> <a href="mailto:fursorger.game@gmail.com">fursorger.game@gmail.com</a>
+            <strong>E-Mail:</strong> <a href={`mailto:${content.email}`}>{content.email}</a>
             </p>
             <p>Quelle: Erstellt mit dem <a title="Impressum Generator Deutschland" href="https://www.adsimple.de/impressum-generator/" target="_blank" rel="follow" >Impressum Generator</a> von AdSimple in Kooperation mit <a href="https://www.hashtagmann.de" target="_blank" rel="follow" title="">hashtagmann.de</a>
             </p>

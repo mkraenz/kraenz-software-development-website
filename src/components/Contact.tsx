@@ -5,17 +5,18 @@ import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
+import { content } from "../content";
 import ContactForm from "./ContactForm";
 
 const useStyles = makeStyles(theme => ({
     cardHeader: {
-        backgroundColor:
-            theme.palette.type === "dark"
-                ? theme.palette.grey[700]
-                : theme.palette.grey[200],
+        backgroundColor: theme.palette.primary.light,
     },
     container: {
         marginTop: theme.spacing(15),
+    },
+    mailToSubheader: {
+        color: theme.palette.text.primary,
     },
 }));
 
@@ -23,7 +24,7 @@ const Contact: React.FunctionComponent = () => {
     const classes = useStyles({});
 
     return (
-        <Container maxWidth="md" component="main" className={classes.container}>
+        <Container maxWidth="md" className={classes.container} id="contact">
             <Card>
                 <CardHeader
                     title="Contact"
@@ -31,13 +32,19 @@ const Contact: React.FunctionComponent = () => {
                     subheaderTypographyProps={{
                         align: "center",
                     }}
-                    subheader="software@kraenz.com"
+                    subheader={
+                        <a
+                            href={`mailto:${content.email}`}
+                            className={classes.mailToSubheader}
+                        >
+                            {content.email}
+                        </a>
+                    }
                     className={classes.cardHeader}
                 />
                 <CardContent>
                     <Typography align="center">
-                        Please send us any questions or requests. We look foward
-                        to hearing from you.
+                        {content.contact.subheader}
                     </Typography>
                     <ContactForm />
                 </CardContent>

@@ -6,12 +6,11 @@ import Head from "next/head";
 import React from "react";
 import ReactGA from "react-ga";
 import { Provider } from "react-redux";
+import { CONFIG } from "../src/api/config";
+import { content } from "../src/content";
 import { isProductionBrowser } from "../src/isProductionBrowser";
 import { makeStore } from "../src/redux/store";
 import theme from "../src/theme";
-
-const websiteTitle = "Kraenz Software Development";
-const googleAnalyticsId = "FAKE ID"; // TODO create a new app
 
 class MyApp extends App<{ store: ReturnType<typeof makeStore> }> {
     componentDidMount() {
@@ -29,7 +28,7 @@ class MyApp extends App<{ store: ReturnType<typeof makeStore> }> {
         return (
             <React.Fragment>
                 <Head>
-                    <title>{websiteTitle}</title>
+                    <title>{content.title}</title>
                     {process.browser && (
                         <script type="text/javascript" id="hotjar">
                             {/* {initHotjar() as any} */}
@@ -53,7 +52,7 @@ export default withRedux(makeStore as any)(MyApp);
 const initGoogleAnalytics = () => {
     if (isProductionBrowser) {
         ReactGA.set({ anonymizeIp: true });
-        ReactGA.initialize(googleAnalyticsId);
+        ReactGA.initialize(CONFIG.googleAnalyticsId);
         ReactGA.pageview(window.location.pathname + window.location.search);
     }
 };
