@@ -24,62 +24,106 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
+const isValidEmail = (email: string) => {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
+};
+
+type ChangeEvent = React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
 const ContactForm = () => {
     const classes = useStyles();
     const [name, setName] = useState("");
+    const [nameError, setNameError] = useState(false);
     const [email, setEmail] = useState("");
+    const [emailError, setEmailError] = useState(false);
     const [message, setMessage] = useState("");
+    const [messageError, setMessageError] = useState(false);
     const [open, setOpen] = React.useState(false);
     const [sendSuccess, setSendSuccess] = React.useState(false);
+
+    const ensureFilledForm = () => {
+        if(nameError || !name){
+            document.getElementById("contact-name")?.focus()
+            return false;
+        }
+        if(emailError || !email){
+            document.getElementById("contact-email")?.focus()
+            return false;
+        }
+        if(messageError || !message){
+            document.getElementById("contact-message")?.focus()
+            return false;
+        }
+        return true;
+    }
     const handleSubmit = async (
         event: React.MouseEvent<HTMLButtonElement, MouseEvent>
     ) => {
-        const sendSuccessful = await sendEmail(event, name, email, message);
-        setSendSuccess(sendSuccessful);
-        setOpen(true);
+        event.preventDefault()
+        const isFilled = ensureFilledForm();
+        if(isFilled){
+            const sendSuccessful = await sendEmail(event, name, email, message);
+            setSendSuccess(sendSuccessful);
+            setOpen(true);
+        }
+    };
+    const handleNameChanged = ({ target: { value } }: ChangeEvent) => {
+        setName(value);
+        // name is 1 char behind thus use value instead
+        setNameError(!value);
+    };
+    const handleEmailChanged = ({ target: { value } }: ChangeEvent) => {
+        setEmail(value);
+        // email is 1 char behind thus use value instead
+        setEmailError(!isValidEmail(value));
+    };
+    const handleMessageChanged = ({ target: { value } }: ChangeEvent) => {
+        setMessage(value);
+        // message is 1 char behind thus use value instead
+        setMessageError(!value);
     };
 
+    const commonProps = {
+        variant: "outlined" as const,
+        margin: "normal" as const,
+        required: true,
+        fullWidth: true,
+    };
     return (
         <Container component="main" maxWidth="xs">
             <CssBaseline />
             <div className={classes.paper}>
                 <form className={classes.form} noValidate>
                     <TextField
-                        variant="outlined"
-                        margin="normal"
-                        required
-                        fullWidth
-                        id="name"
+                        {...commonProps}
+                        id="contact-name"
                         label="Name"
                         name="name"
                         autoComplete="name"
                         value={name}
-                        onChange={event => setName(event.target.value)}
+                        onChange={handleNameChanged}
+                        error={nameError}
                     />
                     <TextField
-                        variant="outlined"
-                        margin="normal"
-                        required
-                        fullWidth
-                        id="email"
+                        {...commonProps}
+                        id="contact-email"
                         label="Email Address"
                         name="email"
                         autoComplete="email"
                         value={email}
-                        onChange={event => setEmail(event.target.value)}
+                        onChange={handleEmailChanged}
+                        error={emailError}
                     />
                     <TextField
+                        {...commonProps}
                         multiline
-                        variant="outlined"
-                        required
-                        margin="normal"
-                        fullWidth
-                        id="message"
+                        id="contact-message"
                         label="Message"
                         rows="4"
                         autoComplete="off"
                         value={message}
-                        onChange={event => setMessage(event.target.value)}
+                        onChange={handleMessageChanged}
+                        error={messageError}
                     />
                     <Button
                         type="submit"
@@ -122,8 +166,7 @@ const sendEmail = async (
             templateId,
             templateParams
         );
-        console.log("email sending success", response.status, response.text);
-        return true;
+        return response.status === 200;
     } catch (err) {
         console.log("email sending failed", err, err.message);
         return false;
