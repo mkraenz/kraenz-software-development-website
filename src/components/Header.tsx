@@ -28,56 +28,23 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const data = [
-    { href: "#skills", title: "Skills" },
-    { href: content.contact.href, title: content.contact.header },
-];
+const data = [content.latestWork, content.skills, content.contact];
 
 const Header: React.FunctionComponent = () => {
     const classes = useStyles({});
     const isXs = useMediaQuery(theme =>
         (theme as Theme).breakpoints.down("xs")
     );
-    if (isXs) {
-        return (
-            <AppBar
-                position="static"
-                color="default"
-                elevation={0}
-                className={classes.appBar}
-            >
-                <Container maxWidth="md">
-                    <Toolbar className={classes.toolbar} disableGutters>
-                        <nav>
-                            {data.map(date => (
-                                <Link
-                                    key={date.title}
-                                    variant="button"
-                                    color="textPrimary"
-                                    href={date.href}
-                                    className={classes.link}
-                                >
-                                    {date.title}
-                                </Link>
-                            ))}
-                        </nav>
-                        <IconButton
-                            href={content.urls.github}
-                            className={classes.link}
-                        >
-                            <GitHubIcon />
-                        </IconButton>
-                        <IconButton
-                            href={content.urls.linkedIn}
-                            className={classes.link}
-                        >
-                            <LinkedIn />
-                        </IconButton>
-                    </Toolbar>
-                </Container>
-            </AppBar>
-        );
-    }
+    const isIndexPage = process.browser && window.location.pathname === "/";
+    const handleClick = (
+        event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+    ) => {
+        document.getElementById(event.currentTarget.innerHTML)!.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "start",
+        });
+    };
     return (
         <AppBar
             position="static"
@@ -87,28 +54,31 @@ const Header: React.FunctionComponent = () => {
         >
             <Container maxWidth="md">
                 <Toolbar className={classes.toolbar}>
-                    <Typography
-                        variant="h6"
-                        color="inherit"
-                        noWrap
-                        className={classes.toolbarTitle}
-                    >
-                        <Link color="textPrimary" href="/">
-                            {content.title}
-                        </Link>
-                    </Typography>
-                    <nav>
-                        {data.map(date => (
-                            <Link
-                                key={date.title}
-                                variant="button"
-                                color="textPrimary"
-                                href={date.href}
-                                className={classes.link}
-                            >
-                                {date.title}
+                    {!isXs && (
+                        <Typography
+                            variant="h6"
+                            color="inherit"
+                            noWrap
+                            className={classes.toolbarTitle}
+                        >
+                            <Link color="textPrimary" href="/">
+                                {content.title}
                             </Link>
-                        ))}
+                        </Typography>
+                    )}
+                    <nav>
+                        {isIndexPage &&
+                            data.map(date => (
+                                <Link
+                                    key={date.id}
+                                    variant="button"
+                                    color="textPrimary"
+                                    onClick={handleClick}
+                                    className={classes.link}
+                                >
+                                    {date.id}
+                                </Link>
+                            ))}
                     </nav>
                     <IconButton
                         href={content.urls.github}

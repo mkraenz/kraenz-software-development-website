@@ -5,8 +5,8 @@ import Link from "@material-ui/core/Link";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
-import Copyright from "./Copyright";
 import { content } from "../content";
+import Copyright from "./Copyright";
 
 const useStyles = makeStyles(theme => ({
     footer: {

@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: theme.palette.primary.light,
     },
     container: {
-        marginTop: theme.spacing(15),
+        marginTop: theme.spacing(16),
     },
     mailToSubheader: {
         color: theme.palette.text.primary,
@@ -24,10 +24,14 @@ const Contact: React.FunctionComponent = () => {
     const classes = useStyles({});
 
     return (
-        <Container maxWidth="md" className={classes.container} id="contact">
+        <Container
+            maxWidth="md"
+            className={classes.container}
+            id={content.contact.id}
+        >
             <Card>
                 <CardHeader
-                    title="Contact"
+                    title={content.contact.title}
                     titleTypographyProps={{ align: "center" }}
                     subheaderTypographyProps={{
                         align: "center",

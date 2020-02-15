@@ -11,16 +11,23 @@ export default () => {
     );
 }
 
+const data = {
+    email: content.email,
+    privacyPolicy: content.privacyPolicy,
+    address: content.address,
+    imprint: content.imprint
+}
+
 const Imprint: React.FunctionComponent = () => {
     return (
         <Container maxWidth="md" component="main">
             <h1 className="adsimple-321139178">Impressum</h1>
             <p className="adsimple-321139178">Informationspflicht laut § 5 TMG.</p>
             <p className="adsimple-321139178"></p>
-            <p>{content.address.name}</p>
-            <p className="adsimple-321139178">{content.address.street}<br />{content.address.city}<br />{content.address.country}</p>
+            <p>{data.address.name}</p>
+            <p className="adsimple-321139178">{data.address.street}<br />{data.address.city}<br />{data.address.country}</p>
             <p className="adsimple-321139178">
-            <strong>E-Mail:</strong> <a href={`mailto:${content.email}`}>{content.email}</a>
+            <strong>E-Mail:</strong> <a href={`mailto:${data.email}`}>{data.email}</a>
             </p>
             <p>Quelle: Erstellt mit dem <a title="Impressum Generator Deutschland" href="https://www.adsimple.de/impressum-generator/" target="_blank" rel="follow" >Impressum Generator</a> von AdSimple in Kooperation mit <a href="https://www.hashtagmann.de" target="_blank" rel="follow" title="">hashtagmann.de</a>
             </p>
@@ -36,15 +43,19 @@ const Imprint: React.FunctionComponent = () => {
             <p>Unsere Webseite enthält Links zu anderen Webseiten für deren Inhalt wir nicht verantwortlich sind. Haftung für verlinkte Websites besteht für uns nicht, da wir keine Kenntnis rechtswidriger Tätigkeiten hatten und haben, uns solche Rechtswidrigkeiten auch bisher nicht aufgefallen sind und wir Links sofort entfernen würden, wenn uns Rechtswidrigkeiten bekannt werden.</p>
             <p>Wenn Ihnen rechtswidrige Links auf unserer Website auffallen, bitte wir Sie uns zu kontaktieren. Sie finden die Kontaktdaten im Impressum.</p>
             <h2 className="adsimple-321139178">Urheberrechtshinweis</h2>
-            <p>Alle Inhalte dieser Webseite (Bilder, Fotos, Texte, Videos) unterliegen dem Urheberrecht der Bundesrepublik Deutschland. Bitte fragen Sie uns bevor Sie die Inhalte dieser Website verbreiten, vervielfältigen oder verwerten wie zum Beispiel auf anderen Websites erneut veröffentlichen. Falls notwendig, werden wir die unerlaubte Nutzung von Teilen der Inhalte unserer Seite rechtlich verfolgen.</p>
+            <p>Alle Inhalte dieser Webseite (Bilder, Fotos, Texte, Videos) unterliegen dem Urheberrecht der Bundesrepublik Deutschland und der Schweizerischen Eidgenossenschaft. Bitte fragen Sie uns bevor Sie die Inhalte dieser Website verbreiten, vervielfältigen oder verwerten wie zum Beispiel auf anderen Websites erneut veröffentlichen. Falls notwendig, werden wir die unerlaubte Nutzung von Teilen der Inhalte unserer Seite rechtlich verfolgen.</p>
             <p>Sollten Sie auf dieser Webseite Inhalte finden, die das Urheberrecht verletzen, bitten wir Sie uns zu kontaktieren.</p>
             <h2 className="adsimple-321139178">Bildernachweis</h2>
             <p>Die Bilder, Fotos und Grafiken auf dieser Webseite sind urheberrechtlich geschützt.</p>
             <p>Die Bilderrechte liegen bei den folgenden Fotografen und Unternehmen:</p>
             <ul className="adsimple-321139178">
-            <li className="adsimple-321139178">Fotograf Mustermann</li>
+                {data.imprint.images.map(image => (
+                    <li className="adsimple-321139178">{image.filename} - {image.owner}</li>   
+                    )
+                )}
             </ul>
-            <h1 className="adsimple-321139178">Datenschutzerklärung</h1>
+            <p>Bei Verletzung von Urheberrechten unsererseits bitten wir um Ihre Benachrichtigung an <a href={`mailto:${data.email}`}>{data.email}</a>. Wir werden die betroffenen Inhalte umgehend entfernen. Wir bitten im Voraus vielmals um Entschuldigung.</p>
+            <h1 className="adsimple-321139178" id={data.privacyPolicy.id}>Datenschutzerklärung</h1>
             <h2 className="adsimple-321139178">Datenschutz</h2>
             <p>Wir haben diese Datenschutzerklärung (Fassung 31.12.2019-321139178) verfasst, um Ihnen gemäß der Vorgaben der <a className="adsimple-321139178" href="https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679&amp;tid=321139178" target="_blank" rel="noopener">Datenschutz-Grundverordnung (EU) 2016/679</a> zu erklären, welche Informationen wir sammeln, wie wir Daten verwenden und welche Entscheidungsmöglichkeiten Sie als Besucher dieser Webseite haben.</p>
             <p>Leider liegt es in der Natur der Sache, dass diese Erklärungen sehr technisch klingen, wir haben uns bei der Erstellung jedoch bemüht die wichtigsten Dinge so einfach und klar wie möglich zu beschreiben.</p>
