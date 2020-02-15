@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const data = [content.latestWork, content.skills, content.contact];
+const data = [content.latestWork, content.services, content.contact];
 
 const Header: React.FunctionComponent = () => {
     const classes = useStyles({});
@@ -80,16 +80,10 @@ const Header: React.FunctionComponent = () => {
                                 </Link>
                             ))}
                     </nav>
-                    <IconButton
-                        href={content.urls.github}
-                        className={classes.link}
-                    >
+                    <IconButton href={content.urls.github}>
                         <GitHubIcon />
                     </IconButton>
-                    <IconButton
-                        href={content.urls.linkedIn}
-                        className={classes.link}
-                    >
+                    <IconButton href={content.urls.linkedIn}>
                         <LinkedIn />
                     </IconButton>
                 </Toolbar>

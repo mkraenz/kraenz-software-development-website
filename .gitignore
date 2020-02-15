@@ -16,3 +16,7 @@ yarn-error.log*
 
 # Next.js
 /.next
+
+# waiting for usage permissions
+public/latest-work/coachhub-logo.svg
+public/latest-work/vestr-logo.png

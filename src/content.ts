@@ -1,7 +1,7 @@
 export const content = {
     title: "Kraenz Software Development",
-    subtitle: "High Quality Web Development for you",
-    subsubTitle: "Mirco Kraenz - available for freelance work",
+    subtitle: "I enjoy creating software products - and it might be yours.",
+    subsubTitle: "available as freelancer",
     myName: "Mirco Kraenz",
     landingPageSecondaryButton: "LinkedIn",
     urls: {
@@ -20,10 +20,20 @@ export const content = {
         title: "Contact",
         subheader: "Let's discuss on how I can support your project in a call.",
     },
-    skills: {
-        id: "skills",
-        title: "Skills",
+    services: {
+        id: "services",
+        title: "Services",
         subheader: "",
+        description: `
+            Frontend, Backend, and (React Native) app development to make your project a reality.
+            Experienced in devops and automation to streamline workflows and increase productive team output.
+
+            Focus on quality code with automated testing to ensure sustainable, high development speed 
+            across the whole team.
+
+            Strengths are in TypeScript, JavaScript, NodeJS, Express, NestJS, React with Material UI, Redux, MongoDB.
+            Happy to learn new technologies.
+        `,
     },
     latestWork: {
         id: "projects",

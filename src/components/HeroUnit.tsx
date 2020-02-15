@@ -59,6 +59,7 @@ const HeroUnit: React.FunctionComponent = () => {
                     {content.subtitle}
                 </Typography>
                 {/* <Typography variant="h5" align="center" component="p">
+                    <Box fontWeight="fontWeightBold">{content.myName}</Box>
                     {content.subsubTitle}
                 </Typography> */}
                 <Grid container className={classes.buttonContainer}>
