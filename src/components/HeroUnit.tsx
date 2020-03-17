@@ -58,10 +58,10 @@ const HeroUnit: React.FunctionComponent = () => {
                 >
                     {content.subtitle}
                 </Typography>
-                {/* <Typography variant="h5" align="center" component="p">
-                    <Box fontWeight="fontWeightBold">{content.myName}</Box>
+                <Typography variant="h6" align="center" component="p">
+                    {content.myName} - {content.academicDegree} -{" "}
                     {content.subsubTitle}
-                </Typography> */}
+                </Typography>
                 <Grid container className={classes.buttonContainer}>
                     <Grid item className={classes.button}>
                         <Button

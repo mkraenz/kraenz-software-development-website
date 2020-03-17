@@ -1,8 +1,9 @@
 export const content = {
     title: "Kraenz Software Development",
-    subtitle: "I enjoy website creation - the next project is your website.",
-    subsubTitle: "available as freelancer now",
+    subtitle: "I enjoy website creation - and my next project is your website.",
+    subsubTitle: "now available for freelance work",
     myName: "Mirco Kraenz",
+    academicDegree: "M.Sc. Mathematics",
     landingPageSecondaryButton: "LinkedIn",
     urls: {
         linkedIn: "https://www.linkedin.com/in/mirco-kraenz/",
