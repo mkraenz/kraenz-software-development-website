@@ -1,7 +1,7 @@
 export const content = {
     title: "Kraenz Software Development",
-    subtitle: "I enjoy creating software products - and it might be yours.",
-    subsubTitle: "available as freelancer",
+    subtitle: "I enjoy website creation - the next project is your website.",
+    subsubTitle: "available as freelancer now",
     myName: "Mirco Kraenz",
     landingPageSecondaryButton: "LinkedIn",
     urls: {
@@ -23,17 +23,29 @@ export const content = {
     services: {
         id: "services",
         title: "Services",
-        subheader: "",
+        subheader: "Freelance React Frontend and NodeJS Backend Development",
         description: `
-            Frontend, Backend, and (React Native) app development to make your project a reality.
-            Experienced in devops and automation to streamline workflows and increase productive team output.
-
-            Focus on quality code with automated testing to ensure sustainable, high development speed 
-            across the whole team.
-
-            Strengths are in TypeScript, JavaScript, NodeJS, Express, NestJS, React with Material UI, Redux, MongoDB.
-            Happy to learn new technologies.
+            Your project needs a fullstack web developer to make your dream a reality?
+            As a freelancer, I create the Frontend, Backend, and (React Native-) app for you. 
+            Also as part of an existing development team.
         `,
+        description2: `
+            Additionally, thanks to multiyear experience in DevOps and automation, 
+            we streamline workflows together and thereby increase overall productive team output.
+        `,
+        strengths: [
+            {
+                name: "TypeScript & JavaScript",
+                link: "https://www.typescriptlang.org/",
+            },
+            { name: "NodeJS", link: "https://nodejs.org/en/" },
+            { name: "NestJS", link: "https://nestjs.com/" },
+            { name: "React", link: "https://reactjs.org/" },
+            { name: "Material UI", link: "https://material-ui.com/" },
+            { name: "Redux", link: "https://redux.js.org/" },
+            { name: "MongoDB", link: "https://www.mongodb.com/" },
+            { name: "PostgreSQL", link: "https://www.postgresql.org/" },
+        ],
     },
     latestWork: {
         id: "projects",
@@ -80,7 +92,13 @@ export const content = {
                     Inspired by the Star Trek: Voyager episode "Caretaker".`,
                 externalLink: "https://fursorger.now.sh/",
                 internalLink: "/latest-work/fursorger",
-                techStack: [],
+                techStack: [
+                    "TypeScript",
+                    "JavaScript",
+                    "Phaser3",
+                    "ZEIT Now",
+                    "HTML5",
+                ],
                 teamSize: "2 persons",
             },
             {
@@ -108,6 +126,19 @@ export const content = {
                 internalLink: "/latest-work/parvenu",
                 techStack: [],
                 teamSize: "2 persons",
+            },
+            {
+                title: "Flappy Fly",
+                imgTitle: "Flappy Fly in-game view",
+                imgAlt: "Flappy Fly in-game view",
+                imgPath: "/latest-work/flappy-fly-in-game.png",
+                role: "Product Owner, Frontend Developer",
+                description: `Open-source clone of 2013's viral game Flappy Bird developed by Dong Nguyen. 
+                Created fully with publicly licensed assets.`,
+                externalLink: "https://prosingularity.github.io/flappy-fly/",
+                internalLink: "/latest-work/flappy-fly",
+                techStack: ["TypeScript", "JavaScript", "Phaser3", "HTML5"],
+                teamSize: "1 person",
             },
         ],
     },
@@ -140,6 +171,7 @@ export const content = {
             { filename: "awesome-app-logo.png", owner: "Mirco Kraenz" },
             { filename: "parvenu-in-game.png", owner: "Mirco Kraenz" },
             { filename: "fursorger-in-game.png", owner: "Mirco Kraenz" },
+            { filename: "flappy-fly-in-game.png", owner: "Mirco Kraenz" },
         ],
     },
 };
