@@ -56,7 +56,8 @@ export const content = {
                 title: "CoachHub",
                 imgTitle: "CoachHub logo",
                 imgAlt: "CoachHub logo",
-                imgPath: "/latest-work/coachhub-logo.svg",
+                imgPath:
+                    "https://coachhub.io/wp-content/uploads/2020/02/Logo.svg",
                 role: "Fullstack Developer",
                 description: `Coaching Platform connecting companies like Amazon and SoundCloud 
                     with Coaches for one-on-one online training sessions to increase employee 
