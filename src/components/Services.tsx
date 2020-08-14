@@ -73,7 +73,11 @@ const Services: React.FunctionComponent = () => {
                 </Typography>
                 <List>
                     {data.strengths.map(strength => (
-                        <ListItemLink button href={strength.link}>
+                        <ListItemLink
+                            button
+                            href={strength.link}
+                            key={strength.name}
+                        >
                             <ListItemIcon>
                                 <CheckIcon className={classes.checkIcon} />
                             </ListItemIcon>
