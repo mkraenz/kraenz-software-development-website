@@ -10,6 +10,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedIn from "@material-ui/icons/LinkedIn";
 import React from "react";
 import { content } from "../content";
+import HeaderMenu from "./HeaderMenu";
 
 const useStyles = makeStyles(theme => ({
     appBar: {
@@ -42,21 +43,57 @@ const Logo = () => {
     );
 };
 
+const scrollTo = (htmlElementId: string) => () => {
+    document.getElementById(htmlElementId)!.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "start",
+    });
+};
+
+const Navigation: React.FunctionComponent<{ showMainPageNav: boolean }> = ({
+    showMainPageNav,
+}) => {
+    const classes = useStyles({});
+    return (
+        <>
+            <Grid item>
+                <nav>
+                    {showMainPageNav &&
+                        data.map(date => (
+                            <Link
+                                key={date.id}
+                                variant="button"
+                                color="textPrimary"
+                                onClick={scrollTo(date.id)}
+                                className={classes.link}
+                            >
+                                {date.id}
+                            </Link>
+                        ))}
+                </nav>
+            </Grid>
+            <Grid item>
+                <IconButton href={content.urls.github}>
+                    <GitHubIcon />
+                </IconButton>
+            </Grid>
+            <Grid item>
+                <IconButton href={content.urls.linkedIn}>
+                    <LinkedIn />
+                </IconButton>
+            </Grid>
+        </>
+    );
+};
+
 const Header: React.FunctionComponent = () => {
     const classes = useStyles({});
-    const isXs = useMediaQuery(theme =>
+    const onMobile = useMediaQuery(theme =>
         (theme as Theme).breakpoints.down("xs")
     );
     const isIndexPage = process.browser && window.location.pathname === "/";
-    const handleClick = (
-        event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-    ) => {
-        document.getElementById(event.currentTarget.innerHTML)!.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-            inline: "start",
-        });
-    };
+
     return (
         <AppBar
             position="static"
@@ -66,41 +103,19 @@ const Header: React.FunctionComponent = () => {
         >
             <Container maxWidth="md">
                 <Toolbar className={classes.toolbar}>
-                    {!isXs && (
-                        <>
-                            <Grid item>
-                                <Logo />
-                            </Grid>
-                            {/* empty grid with xs to use-up the space in-between logo and nav */}
-                            <Grid item xs />
-                        </>
+                    <Grid item>
+                        <Logo />
+                    </Grid>
+                    {/* empty grid with xs to use-up the space in-between logo and nav */}
+                    <Grid item xs />
+                    {onMobile ? (
+                        <HeaderMenu
+                            menuItems={data}
+                            showMenuButton={isIndexPage}
+                        />
+                    ) : (
+                        <Navigation showMainPageNav={isIndexPage} />
                     )}
-                    <Grid item>
-                        <nav>
-                            {isIndexPage &&
-                                data.map(date => (
-                                    <Link
-                                        key={date.id}
-                                        variant="button"
-                                        color="textPrimary"
-                                        onClick={handleClick}
-                                        className={classes.link}
-                                    >
-                                        {date.id}
-                                    </Link>
-                                ))}
-                        </nav>
-                    </Grid>
-                    <Grid item>
-                        <IconButton href={content.urls.github}>
-                            <GitHubIcon />
-                        </IconButton>
-                    </Grid>
-                    <Grid item>
-                        <IconButton href={content.urls.linkedIn}>
-                            <LinkedIn />
-                        </IconButton>
-                    </Grid>
                 </Toolbar>
             </Container>
         </AppBar>
