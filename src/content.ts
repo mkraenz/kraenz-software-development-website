@@ -5,6 +5,7 @@ export const content = {
     myName: "Mirco Kraenz",
     academicDegree: "M.Sc. Mathematics",
     landingPageSecondaryButton: "LinkedIn",
+    logo: "/logo/Kraenz-Software-Development-trimmed.png",
     urls: {
         linkedIn: "https://www.linkedin.com/in/mirco-kraenz/",
         github: "https://github.com/proSingularity/",
