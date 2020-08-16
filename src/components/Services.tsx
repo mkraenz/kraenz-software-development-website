@@ -31,7 +31,12 @@ const useStyles = makeStyles(theme => ({
     paragraph: {
         marginBottom: theme.spacing(2),
     },
-    strengths: { marginTop: theme.spacing(4) },
+    strengths: {
+        marginTop: theme.spacing(4),
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+    },
     checkIcon: { color: theme.palette.primary.main },
 }));
 
