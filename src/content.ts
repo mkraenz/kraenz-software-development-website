@@ -67,7 +67,7 @@ export const content = {
                 externalLink: "https://coachhub.io/",
                 internalLink: "/latest-work/coachhub",
                 techStack: [], // TODO add to details page
-                teamSize: "50-100 persons",
+                teamSize: "50-100 people",
             },
             {
                 title: "vestr",
@@ -82,7 +82,7 @@ export const content = {
                 externalLink: "https://www.vestr.com/",
                 internalLink: "/latest-work/vestr",
                 techStack: [],
-                teamSize: "10-20 persons",
+                teamSize: "10-20 people",
             },
             {
                 title: "Der Fursorger",
@@ -91,7 +91,7 @@ export const content = {
                 imgPath: "/latest-work/fursorger-in-game.png",
                 role:
                     "Product Owner, Fullstack Developer, DevOps, Marketing, Mentor",
-                description: `Fantasy Puzzle & Logic Game. Developed by 2-person team.
+                description: `Fantasy Puzzle & Logic Game. Developed by 2-persons team.
                     Inspired by the Star Trek: Voyager episode "Caretaker".`,
                 externalLink: "https://fursorger.now.sh/",
                 internalLink: "/latest-work/fursorger",
