@@ -4,7 +4,7 @@ export const content = {
     subsubTitle: "now available for freelance work",
     myName: "Mirco Kraenz",
     academicDegree: "M.Sc. Mathematics",
-    landingPageSecondaryButton: "LinkedIn",
+    landingPageSecondaryButton: "CV on LinkedIn",
     logo: "/logo/Kraenz-Software-Development-trimmed.png",
     urls: {
         linkedIn: "https://www.linkedin.com/in/mirco-kraenz/",
