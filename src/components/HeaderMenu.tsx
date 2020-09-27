@@ -53,12 +53,12 @@ const HeaderMenu: React.FunctionComponent<Props> = ({
     return (
         <>
             <Grid item>
-                <IconButton href={content.urls.github}>
+                <IconButton href={content.urls.github} target="_blank">
                     <GitHubIcon />
                 </IconButton>
             </Grid>
             <Grid item>
-                <IconButton href={content.urls.linkedIn}>
+                <IconButton href={content.urls.linkedIn} target="_blank">
                     <LinkedIn />
                 </IconButton>
             </Grid>

@@ -77,6 +77,7 @@ const HeroUnit: React.FunctionComponent = () => {
                             variant="outlined"
                             color="secondary"
                             href={content.urls.linkedIn}
+                            target="_blank"
                         >
                             {content.landingPageSecondaryButton}
                         </Button>

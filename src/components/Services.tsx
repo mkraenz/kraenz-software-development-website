@@ -81,6 +81,7 @@ const Services: React.FunctionComponent = () => {
                         <ListItemLink
                             button
                             href={strength.link}
+                            target="_blank"
                             key={strength.name}
                         >
                             <ListItemIcon>
