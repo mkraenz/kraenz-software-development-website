@@ -16,9 +16,6 @@ export default class MyDocument extends Document {
           />
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
-          {/* google search console */}
-          <meta name="google-site-verification" content="2xIqoGPTtGv2M6VV-4GWvF6VJ-l_hz7wZaLzacvKmgo" />
-
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
@@ -28,7 +25,6 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
           <link rel="manifest" href="/favicon/site.webmanifest" />
           <link rel="shortcut icon" href="/favicon/favicon.ico" />
-          <meta name="keywords" content={content.meta.keywords} />
         </Head>
         <body>
           <Main />

@@ -180,6 +180,8 @@ export const content = {
     },
     meta: {
         keywords:
-            "full stack developer, full stack entwickler, fintech, nodejs backend developer, typescript, Nodejs, fullstack, berlin typescript entwickler",
+            "full stack developer, full stack entwickler, fintech, nodejs backend developer, typescript, Nodejs, fullstack, berlin typescript entwickler, typescript freelancer, typescript freiberufler",
+        description:
+            "Awesomeness for your Web App - Mirco Kraenz - Freelance Full Stack Developer - Now Available",
     },
 };

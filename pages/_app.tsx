@@ -28,10 +28,13 @@ class MyApp extends App<{ store: ReturnType<typeof makeStore> }> {
         return (
             <React.Fragment>
                 <Head>
-                    <title>{content.title}</title>
-                    <meta name="author" content="John Doe" />  
-                    <meta name="description" content="Kraenz Software Development" />
-                    <meta name="keywords" content="software,development,freelancer,web development,web entwicklung" />
+                    <title>{content.subtitle}</title>
+                    <meta name="author" content={content.myName} />
+                    <meta
+                        name="description"
+                        content={content.meta.description}
+                    />
+                    <meta name="keywords" content={content.meta.keywords} />
                     {process.browser && (
                         <script type="text/javascript" id="hotjar">
                             {/* {initHotjar() as any} */}
