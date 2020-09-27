@@ -19,6 +19,9 @@ const useStyles = makeStyles(theme => ({
         margin: theme.spacing(5, 0, 1),
     },
     button: {},
+    title: {
+        fontSize: "3.2rem",
+    },
     subtitle: {
         marginBottom: theme.spacing(2),
     },
@@ -47,6 +50,7 @@ const HeroUnit: React.FunctionComponent = () => {
                     align="center"
                     color="textPrimary"
                     gutterBottom
+                    className={classes.title}
                 >
                     {content.title}
                 </Typography>

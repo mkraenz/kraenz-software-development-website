@@ -1,6 +1,6 @@
 export const content = {
-    title: "Kraenz Software Development",
-    subtitle: "Awesomeness For Your Web App.",
+    title: "Awesomeness for your Web App.",
+    subtitle: "Kraenz Software Development",
     subsubTitle: "Freelance Full Stack Developer - Now Available",
     myName: "Mirco Kraenz",
     academicDegree: "M.Sc. Mathematics",
