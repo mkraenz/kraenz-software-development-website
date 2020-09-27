@@ -26,6 +26,7 @@ const useStyles = makeStyles(theme => ({
     },
     link: {
         margin: theme.spacing(0, 1),
+        cursor: "pointer",
     },
     logo: {
         maxHeight: 35,
