@@ -73,7 +73,7 @@ export const content = {
                 title: "vestr",
                 imgTitle: "vestr logo",
                 imgAlt: "vestr logo",
-                imgPath: "/latest-work/vestr-logo.png",
+                imgPath: "/latest-work/vestr.svg",
                 role:
                     "Senior Backend Developer, Backend Developer and DevOps Engineer",
                 description: `Swiss Fintech startup providing bank-integrated workflow 
@@ -150,7 +150,7 @@ export const content = {
             title: "Legal",
             description: [
                 { href: "/imprint", title: "Imprint" },
-                { href: "/imprint#privacy-policy", title: "Privacy policy" },
+                { href: "/imprint#privacy-policy", title: "Privacy Policy" },
             ],
         },
         {
@@ -170,7 +170,7 @@ export const content = {
     imprint: {
         images: [
             { filename: "coachhub-logo.svg", owner: "CoachHub GmbH" },
-            { filename: "vestr-logo.png", owner: "vestr AG" },
+            { filename: "vestr.svg", owner: "vestr AG" },
             { filename: "awesome-app-logo.png", owner: "Mirco Kraenz" },
             { filename: "parvenu-in-game.png", owner: "Mirco Kraenz" },
             { filename: "fursorger-in-game.png", owner: "Mirco Kraenz" },
