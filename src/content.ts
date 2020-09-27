@@ -178,4 +178,8 @@ export const content = {
             { filename: "flappy-fly-in-game.png", owner: "Mirco Kraenz" },
         ],
     },
+    meta: {
+        keywords:
+            "full stack developer, full stack entwickler, fintech, nodejs backend developer, typescript, Nodejs, fullstack, berlin typescript entwickler",
+    },
 };

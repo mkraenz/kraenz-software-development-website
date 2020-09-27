@@ -1,6 +1,7 @@
 import { ServerStyleSheets } from "@material-ui/core/styles";
 import Document, { Head, Main, NextScript } from "next/document";
 import React from "react";
+import { content } from "../src/content";
 import theme from "../src/theme";
 
 export default class MyDocument extends Document {
@@ -27,6 +28,7 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
           <link rel="manifest" href="/favicon/site.webmanifest" />
           <link rel="shortcut icon" href="/favicon/favicon.ico" />
+          <meta name="keywords" content={content.meta.keywords} />
         </Head>
         <body>
           <Main />
