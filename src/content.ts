@@ -85,12 +85,26 @@ export const content = {
                 teamSize: "10-20 people",
             },
             {
-                title: "Der Fursorger",
-                imgTitle: "Fursorger in-game view",
-                imgAlt: "Fursorger in-game view",
+                title: "You are Awesome App! Daily Motivation Up!",
+                imgTitle: "You are Awesome App! logo",
+                imgAlt: "You are Awesome App! logo",
+                imgPath: "/latest-work/awesome-app-logo.png",
+                role:
+                    "Product Manager, React Native Developer, DevOps, Marketing",
+                description: `Community-driven motivational quotes for Android and IPhone. 
+                    Currently in Closed-Alpha testing on the Google Play Store.`,
+                externalLink: "https://youareawesomeappmo.wixsite.com/awesome",
+                internalLink: "/latest-work/you-are-awesome-app",
+                techStack: [],
+                teamSize: "1 person",
+            },
+            {
+                title: "Der Fürsorger",
+                imgTitle: "Fürsorger in-game view",
+                imgAlt: "Fürsorger in-game view",
                 imgPath: "/latest-work/fursorger-in-game.png",
                 role:
-                    "Product Owner, Fullstack Developer, DevOps, Marketing, Mentor",
+                    "Product Manager, Fullstack Developer, DevOps, Marketing, Mentor",
                 description: `Fantasy Puzzle & Logic Game. Developed by 2-persons team.
                     Inspired by the Star Trek: Voyager episode "Caretaker".`,
                 externalLink: "https://fursorger.now.sh/",
@@ -105,24 +119,11 @@ export const content = {
                 teamSize: "2 persons",
             },
             {
-                title: "You are Awesome App! Daily Motivation Up!",
-                imgTitle: "You are Awesome App! logo",
-                imgAlt: "You are Awesome App! logo",
-                imgPath: "/latest-work/awesome-app-logo.png",
-                role: "Product Owner, Android Developer, DevOps, Marketing",
-                description: `Community-driven motivational quotes for Android. 
-                    Currently in Closed-Alpha testing on the Google Play Store.`,
-                externalLink: "https://youareawesomeappmo.wixsite.com/awesome",
-                internalLink: "/latest-work/you-are-awesome-app",
-                techStack: [],
-                teamSize: "1 person",
-            },
-            {
                 title: "Parvenu",
                 imgTitle: "Parvenu in-game view",
                 imgAlt: "Parvenu in-game view",
                 imgPath: "/latest-work/parvenu-in-game.png",
-                role: "Product Owner, Developer, DevOps, Mentor",
+                role: "Product Manager, Developer, DevOps, Mentor",
                 description: `Medieval economic simulation game prototype inspired by Patrician II. 
                     Predecessor of Der Fursorger`,
                 externalLink: "https://prosingularity.github.io/parvenu/",
@@ -135,7 +136,7 @@ export const content = {
                 imgTitle: "Flappy Fly in-game view",
                 imgAlt: "Flappy Fly in-game view",
                 imgPath: "/latest-work/flappy-fly-in-game.png",
-                role: "Product Owner, Frontend Developer",
+                role: "Product Manager, Frontend Developer",
                 description: `Open-source clone of 2013's viral game Flappy Bird developed by Dong Nguyen. 
                 Created fully with publicly licensed assets.`,
                 externalLink: "https://prosingularity.github.io/flappy-fly/",
