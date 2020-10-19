@@ -20,7 +20,8 @@ export const content = {
     contact: {
         id: "contact",
         title: "Contact",
-        subheader: "Let's discuss on how I can support your project in a call.",
+        subheader:
+            "Let's have a call to find out how I can support you with your project.",
     },
     services: {
         id: "services",
