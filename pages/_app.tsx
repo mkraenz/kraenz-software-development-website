@@ -28,6 +28,10 @@ class MyApp extends App {
                     <title>{content.subtitle}</title>
                     <meta name="author" content={content.myName} />
                     <meta
+                        name="viewport"
+                        content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
+                    />
+                    <meta
                         name="description"
                         content={content.meta.description}
                     />
