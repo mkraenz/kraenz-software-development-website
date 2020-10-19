@@ -1,18 +1,15 @@
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider } from "@material-ui/core/styles";
-import withRedux from "next-redux-wrapper";
 import App from "next/app";
 import Head from "next/head";
 import React from "react";
 import ReactGA from "react-ga";
-import { Provider } from "react-redux";
 import { CONFIG } from "../src/api/config";
 import { content } from "../src/content";
 import { isProductionBrowser } from "../src/isProductionBrowser";
-import { makeStore } from "../src/redux/store";
 import theme from "../src/theme";
 
-class MyApp extends App<{ store: ReturnType<typeof makeStore> }> {
+class MyApp extends App {
     componentDidMount() {
         // Remove the server-side injected CSS.
         const jssStyles = document.querySelector("#jss-server-side");
@@ -23,7 +20,7 @@ class MyApp extends App<{ store: ReturnType<typeof makeStore> }> {
     }
 
     render() {
-        const { Component, pageProps, store } = this.props;
+        const { Component, pageProps } = this.props;
 
         return (
             <React.Fragment>
@@ -41,19 +38,17 @@ class MyApp extends App<{ store: ReturnType<typeof makeStore> }> {
                         </script>
                     )}
                 </Head>
-                <Provider store={store}>
                     <ThemeProvider theme={theme}>
                         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
                         <CssBaseline />
                         <Component {...pageProps} />
                     </ThemeProvider>
-                </Provider>
             </React.Fragment>
         );
     }
 }
 
-export default withRedux(makeStore as any)(MyApp);
+export default MyApp;
 
 const initGoogleAnalytics = () => {
     if (isProductionBrowser) {
