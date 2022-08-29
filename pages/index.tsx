@@ -8,11 +8,13 @@ export default function Index() {
     return (
         <Layout>
             <Divider />
-            <LatestWork />
-            <Divider />
-            <Services />
-            <Divider />
-            <Contact />
+            <main>
+                <LatestWork />
+                <Divider />
+                <Services />
+                <Divider />
+                <Contact />
+            </main>
         </Layout>
     );
 }

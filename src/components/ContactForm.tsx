@@ -90,7 +90,7 @@ const ContactForm = () => {
         fullWidth: true,
     };
     return (
-        <Container component="main" maxWidth="xs">
+        <Container maxWidth="xs">
             <CssBaseline />
             <div className={classes.paper}>
                 <form className={classes.form} noValidate>
