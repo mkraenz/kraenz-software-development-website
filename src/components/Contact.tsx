@@ -10,7 +10,7 @@ import ContactForm from "./ContactForm";
 
 const useStyles = makeStyles(theme => ({
     cardHeader: {
-        backgroundColor: theme.palette.primary.light,
+        backgroundColor: theme.palette.primary.main,
     },
     container: {
         marginTop: theme.spacing(16),
