@@ -44,7 +44,7 @@ const Contact: React.FunctionComponent = () => {
                             {content.email}
                         </a>
                     }
-                    className={classes.cardHeader}
+                    className={`${classes.cardHeader} MuiPaper-elevation3`}
                 />
                 <CardContent>
                     <Typography align="center">

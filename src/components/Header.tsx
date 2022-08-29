@@ -96,12 +96,7 @@ const Header: React.FunctionComponent = () => {
     const isIndexPage = process.browser && window.location.pathname === "/";
 
     return (
-        <AppBar
-            position="static"
-            color="default"
-            elevation={0}
-            className={classes.appBar}
-        >
+        <AppBar position="static" color="default" className={classes.appBar}>
             <Container maxWidth="md">
                 <Toolbar className={classes.toolbar}>
                     <Grid item>
