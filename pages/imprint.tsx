@@ -50,7 +50,7 @@ const Imprint: React.FunctionComponent = () => {
             <p>Die Bilderrechte liegen bei den folgenden Fotografen und Unternehmen:</p>
             <ul className="adsimple-321139178">
                 {data.imprint.images.map(image => (
-                    <li className="adsimple-321139178">{image.filename} - {image.owner}</li>   
+                    <li key={image.filename} className="adsimple-321139178">{image.filename} - {image.owner}</li>   
                     )
                 )}
             </ul>

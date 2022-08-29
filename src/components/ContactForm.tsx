@@ -119,7 +119,7 @@ const ContactForm = () => {
                         multiline
                         id="contact-message"
                         label="Message"
-                        rows="4"
+                        minRows="4"
                         autoComplete="off"
                         value={message}
                         onChange={handleMessageChanged}
