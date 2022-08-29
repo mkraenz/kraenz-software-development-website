@@ -1,13 +1,12 @@
-import { Typography } from "@material-ui/core";
 import IconButton from "@material-ui/core/IconButton";
 import Snackbar from "@material-ui/core/Snackbar";
 import SnackbarContent from "@material-ui/core/SnackbarContent";
 import { makeStyles, Theme } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import CloseIcon from "@material-ui/icons/Close";
 import ErrorIcon from "@material-ui/icons/Error";
 import clsx from "clsx";
-import React from "react";
 
 const useStyles = makeStyles((theme: Theme) => ({
     close: {

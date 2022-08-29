@@ -122,7 +122,7 @@ export const content = {
                 imgAlt: "TypeScript Teatime logo",
                 imgPath: "/latest-work/typescriptteatime.png",
                 role: "Streamer, Host, Software Developer",
-                description: `My weekly stream of software development in TypeScript, C#, about infrastructure including AWS, game development, and more.`,
+                description: `My weekly stream on software development in TypeScript, about infrastructure including AWS, game development, and more.`,
                 externalLink: "https://www.twitch.tv/typescriptteatime",
                 internalLink: "/latest-work/typescriptteatime",
                 techStack: [],
