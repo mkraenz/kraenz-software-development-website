@@ -2,7 +2,6 @@
 
 - [Zeit.co Dashboard](https://zeit.co/mirco/kraenz-software-development-website)
 - [EmailJS Dashboard](https://dashboard.emailjs.com/)
-- [Hotjar Dashboard](https://insights.hotjar.com/)
 
 ## Resources
 

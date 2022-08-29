@@ -4,7 +4,6 @@ export const CONFIG = {
         templateId: "template_QsOH5koE",
         userId: "user_BsXgSjnZ05nGtNjMvebDF",
     },
-    googleAnalyticsId: "FAKE ID", // TODO create a new app
 };
 
 export interface IEmailJSTemplate {
