@@ -1,7 +1,7 @@
 export const content = {
     title: "Awesomeness for your Web\u00A0App",
     subtitle: "Kraenz Software Development",
-    subsubTitle: "Freelance Full Stack Developer - Now Available",
+    subsubTitle: "Freelance Full Stack Developer",
     myName: "Mirco Kraenz",
     academicDegree: "M.Sc. Mathematics",
     landingPageSecondaryButton: "CV on LinkedIn",
@@ -56,19 +56,77 @@ export const content = {
         subheader: "",
         cards: [
             {
+                title: "miralytik healthcare consulting GmbH",
+                imgTitle: "miralytik logo",
+                imgAlt: "miralytik logo",
+                imgPath: "/latest-work/miralytik.svg",
+                role: "Freelance Backend Developer",
+                description: `Healthcare consulting and benchmarking platform for hospitals and medical professionals.`,
+                externalLink: "https://www.miralytik.de/",
+                internalLink: "/latest-work/coachhub",
+                techStack: [
+                    "NestJS",
+                    "GraphQL",
+                    "Svelte",
+                    "Agile",
+                    "Lean",
+                    "Kanban",
+                ], // TODO add details page
+                teamSize: "20-50 people",
+            },
+            {
+                title: "Daily Questions",
+                imgTitle: "Daily Questions logo",
+                imgAlt: "Daily Questions logo",
+                imgPath: "/latest-work/daily-questions.png",
+                role: "Product Manager, React Native Developer",
+                description: `Self-improvement app following leadership coach Marshall Goldsmith's Daily Questions from his book Triggers. Available on Google Play Store.`,
+                externalLink:
+                    "https://play.google.com/store/apps/details?id=eu.kraenz.dailyquestions",
+                internalLink: "/latest-work/daily-questions",
+                techStack: [
+                    "ReactNative",
+                    "Expo",
+                    "Android",
+                    "Material Design",
+                    "Redux",
+                ],
+                teamSize: "1 person",
+            },
+            {
                 title: "CoachHub",
                 imgTitle: "CoachHub logo",
                 imgAlt: "CoachHub logo",
-                imgPath:
-                    "https://coachhub.io/wp-content/uploads/2020/02/Logo.svg",
+                imgPath: "/latest-work/coachhub.svg",
                 role: "Fullstack Developer",
                 description: `Coaching Platform connecting companies like Amazon and SoundCloud 
                     with Coaches for one-on-one online training sessions to increase employee 
                     engagement, skills, and happiness.`,
                 externalLink: "https://coachhub.io/",
                 internalLink: "/latest-work/coachhub",
-                techStack: [], // TODO add to details page
+                techStack: [
+                    "NestJS",
+                    "React",
+                    "Redux",
+                    "Material UI",
+                    "Agile",
+                    "Kanban",
+                    "PostgreSQL",
+                    "Redis",
+                ],
                 teamSize: "50-100 people",
+            },
+            {
+                title: "TypeScript Teatime",
+                imgTitle: "TypeScript Teatime logo",
+                imgAlt: "TypeScript Teatime logo",
+                imgPath: "/latest-work/typescriptteatime.png",
+                role: "Streamer, Host, Software Developer",
+                description: `My weekly stream of software development in TypeScript, C#, about infrastructure including AWS, game development, and more.`,
+                externalLink: "https://www.twitch.tv/typescriptteatime",
+                internalLink: "/latest-work/typescriptteatime",
+                techStack: [],
+                teamSize: "1 person",
             },
             {
                 title: "vestr",
@@ -89,12 +147,13 @@ export const content = {
                 title: "You are Awesome App! Daily Motivation Up!",
                 imgTitle: "You are Awesome App! logo",
                 imgAlt: "You are Awesome App! logo",
-                imgPath: "/latest-work/awesome-app-logo.png",
+                imgPath: "/latest-work/awesome-app.png",
                 role:
                     "Product Manager, React Native Developer, DevOps, Marketing",
                 description: `Community-driven motivational quotes for Android and IPhone. 
-                    Currently in Closed-Alpha testing on the Google Play Store.`,
-                externalLink: "https://youareawesomeappmo.wixsite.com/awesome",
+                    Available on the Google Play Store.`,
+                externalLink:
+                    "https://play.google.com/store/apps/details?id=eu.kraenz.youareawesomeapp",
                 internalLink: "/latest-work/you-are-awesome-app",
                 techStack: [],
                 teamSize: "1 person",
