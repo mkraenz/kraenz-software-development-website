@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
     image: {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
