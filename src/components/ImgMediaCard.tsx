@@ -27,6 +27,10 @@ const useStyles = makeStyles(theme => ({
     team: {
         marginTop: theme.spacing(1),
     },
+    buttonLink: {
+        textDecoration: "none",
+        color: "inherit",
+    },
 }));
 
 interface IImgMediaCardData {
@@ -49,49 +53,68 @@ const ImgMediaCard: React.FunctionComponent<Props> = props => {
     const handleClicked = () => window.open(props.externalLink, "_blank");
     return (
         <Card className={classes.card}>
-            <CardActionArea onClick={handleClicked}>
-                <CardMedia
-                    component="img"
-                    alt={props.imgAlt}
-                    height="140"
-                    image={props.imgPath}
-                    title={props.imgTitle}
-                    className={classes.img}
-                    loading="lazy"
-                />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        {props.title}
-                    </Typography>
-                    <Typography
-                        variant="body2"
-                        color="textSecondary"
-                        component="p"
-                    >
-                        {props.description}
-                    </Typography>
-                    <Typography
-                        variant="body2"
-                        color="textSecondary"
-                        component="p"
-                        className={classes.role}
-                    >
-                        Role: {props.role}
-                    </Typography>
-                    <Typography
-                        variant="body2"
-                        color="textSecondary"
-                        component="p"
-                        className={classes.team}
-                    >
-                        Team: {props.teamSize}
-                    </Typography>
-                </CardContent>
-            </CardActionArea>
+            <a
+                className={classes.buttonLink}
+                href={props.externalLink}
+                target="_blank"
+                referrerPolicy="no-referrer"
+            >
+                <CardActionArea onClick={handleClicked}>
+                    <CardMedia
+                        component="img"
+                        alt={props.imgAlt}
+                        height="140"
+                        image={props.imgPath}
+                        title={props.imgTitle}
+                        className={classes.img}
+                        loading="lazy"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                            {props.title}
+                        </Typography>
+                        <Typography
+                            variant="body2"
+                            color="textSecondary"
+                            component="p"
+                        >
+                            {props.description}
+                        </Typography>
+                        <Typography
+                            variant="body2"
+                            color="textSecondary"
+                            component="p"
+                            className={classes.role}
+                        >
+                            Role: {props.role}
+                        </Typography>
+                        <Typography
+                            variant="body2"
+                            color="textSecondary"
+                            component="p"
+                            className={classes.team}
+                        >
+                            Team: {props.teamSize}
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+            </a>
             <CardActions className={classes.actions}>
-                <Button size="small" color="primary" onClick={handleClicked}>
-                    Learn More
-                </Button>
+                <a
+                    className={classes.buttonLink}
+                    href={props.externalLink}
+                    target="_blank"
+                    referrerPolicy="no-referrer"
+                >
+                    <Button
+                        size="small"
+                        color="primary"
+                        type="button"
+                        onClick={handleClicked}
+                    >
+                        Learn More
+                    </Button>
+                </a>
             </CardActions>
         </Card>
     );

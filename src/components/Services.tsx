@@ -81,6 +81,7 @@ const Services: React.FunctionComponent = () => {
                         <ListItemLink
                             button
                             href={strength.link}
+                            referrerPolicy="no-referrer"
                             target="_blank"
                             key={strength.name}
                         >
