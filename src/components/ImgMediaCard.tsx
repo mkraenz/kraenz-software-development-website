@@ -57,6 +57,7 @@ const ImgMediaCard: React.FunctionComponent<Props> = props => {
                     image={props.imgPath}
                     title={props.imgTitle}
                     className={classes.img}
+                    loading="lazy"
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
