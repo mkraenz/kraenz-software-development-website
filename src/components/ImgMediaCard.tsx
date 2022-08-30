@@ -50,7 +50,6 @@ interface Props extends IImgMediaCardData {}
 const ImgMediaCard: React.FunctionComponent<Props> = props => {
     const classes = useStyles();
 
-    const handleClicked = () => window.open(props.externalLink, "_blank");
     return (
         <Card className={classes.card}>
             <a
@@ -59,7 +58,7 @@ const ImgMediaCard: React.FunctionComponent<Props> = props => {
                 target="_blank"
                 referrerPolicy="no-referrer"
             >
-                <CardActionArea onClick={handleClicked}>
+                <CardActionArea>
                     <CardMedia
                         component="img"
                         alt={props.imgAlt}
@@ -110,7 +109,6 @@ const ImgMediaCard: React.FunctionComponent<Props> = props => {
                         size="small"
                         color="primary"
                         type="button"
-                        onClick={handleClicked}
                     >
                         Learn More
                     </Button>
