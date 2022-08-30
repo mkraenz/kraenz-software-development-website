@@ -3,7 +3,7 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import React from "react";
+import React, { FC } from "react";
 import { content } from "../content";
 
 const useStyles = makeStyles(theme => ({
@@ -39,7 +39,7 @@ const handleContactClicked = () => {
     }
 };
 
-const HeroUnit: React.FunctionComponent = () => {
+const HeroUnit: FC = () => {
     const classes = useStyles({});
     return (
         <Container maxWidth={false} className={classes.container}>

@@ -1,15 +1,7 @@
 import Container from "@material-ui/core/Container";
-import React from "react";
+import { FC } from "react";
 import Layout from "../src/components/Layout";
 import { content } from "../src/content";
-
-export default () => {
-    return (
-    <Layout>
-        <Imprint />
-    </Layout>
-    );
-}
 
 const data = {
     email: content.email,
@@ -18,7 +10,7 @@ const data = {
     imprint: content.imprint
 }
 
-const Imprint: React.FunctionComponent = () => {
+const Imprint: FC = () => {
     return (
         <Container maxWidth="md" component="main">
             <h1 className="adsimple-321139178">Impressum</h1>
@@ -182,3 +174,12 @@ const Imprint: React.FunctionComponent = () => {
         </Container>
     );
 };
+
+const ImprintWithLayout = () => {
+    return (
+        <Layout>
+            <Imprint />
+        </Layout>
+    );
+}
+export default ImprintWithLayout;

@@ -4,7 +4,7 @@ import CardHeader from "@material-ui/core/CardHeader";
 import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import React from "react";
+import { FC } from "react";
 import { content } from "../content";
 import ContactForm from "./ContactForm";
 
@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const Contact: React.FunctionComponent = () => {
+const Contact: FC = () => {
     const classes = useStyles({});
 
     return (

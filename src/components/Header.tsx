@@ -8,7 +8,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedIn from "@material-ui/icons/LinkedIn";
-import React from "react";
+import React, { FC } from "react";
 import { content } from "../content";
 import HeaderMenu from "./HeaderMenu";
 
@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
 
 const data = [content.latestWork, content.services, content.contact];
 
-const Logo = () => {
+const Logo: FC = () => {
     const classes = useStyles({});
     return (
         <Link color="textPrimary" href="/">
@@ -52,7 +52,7 @@ const scrollTo = (htmlElementId: string) => () => {
     });
 };
 
-const Navigation: React.FunctionComponent<{ showMainPageNav: boolean }> = ({
+const Navigation: FC<{ showMainPageNav: boolean }> = ({
     showMainPageNav,
 }) => {
     const classes = useStyles({});
@@ -88,7 +88,7 @@ const Navigation: React.FunctionComponent<{ showMainPageNav: boolean }> = ({
     );
 };
 
-const Header: React.FunctionComponent = () => {
+const Header: FC = () => {
     const classes = useStyles({});
     const onMobile = useMediaQuery(theme =>
         (theme as Theme).breakpoints.down("xs")
