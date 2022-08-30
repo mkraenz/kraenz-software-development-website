@@ -167,7 +167,7 @@ const sendEmail = async (
             templateParams
         );
         return response.status === 200;
-    } catch (err) {
+    } catch (err: any) {
         console.log("email sending failed", err, err.message);
         return false;
     }
