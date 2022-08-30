@@ -1,5 +1,5 @@
 import { lightGreen } from "@material-ui/core/colors";
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createTheme } from "@material-ui/core/styles";
 
 enum Color {
     White = "#fff",
@@ -7,8 +7,7 @@ enum Color {
     LightGreen = "#bef67a",
 }
 
-// Create a theme instance.
-const theme = createMuiTheme({
+const theme = createTheme({
     palette: {
         primary: {
             light: Color.LightGreen,
