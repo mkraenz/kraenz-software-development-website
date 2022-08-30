@@ -26,21 +26,19 @@ export const content = {
     services: {
         id: "services",
         title: "Services",
-        subheader: "Freelance React Frontend and NodeJS Backend Development",
+        subheader: "Freelance NodeJS Backend and React Frontend Development ",
         description: `
-            Your project needs a fullstack web developer to make your dream a reality?
-            As a freelancer, I create the Frontend, Backend, and (React Native-) app for you. 
-            Also as part of an existing development team.
+            You are looking for a Fullstack Software Engineer with 6 years of experience to supplement your team? That is exactly what I offer to you. 
+            
         `,
         description2: `
-            Additionally, thanks to multiyear experience in DevOps and automation, 
-            we streamline workflows together and thereby increase overall productive team output.
+            I am used to integrating with 
+            complex 3rd-party systems like banking systems where one mistake can 
+            cost millions of Euro.
+            I love to work in TypeScript projects. It provides a great balance between speed, safety, flexibility, and documentation for improving team communication.
         `,
         strengths: [
-            {
-                name: "TypeScript & JavaScript",
-                link: "https://www.typescriptlang.org/",
-            },
+            { name: "TypeScript", link: "https://www.typescriptlang.org/" },
             { name: "NodeJS", link: "https://nodejs.org/en/" },
             { name: "NestJS", link: "https://nestjs.com/" },
             { name: "React", link: "https://reactjs.org/" },
