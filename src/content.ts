@@ -184,7 +184,7 @@ export const content = {
                 role: "Product Manager, Developer, DevOps, Mentor",
                 description: `Medieval economic simulation game prototype inspired by Patrician II. 
                     Predecessor of Der Fursorger`,
-                externalLink: "https://prosingularity.github.io/parvenu/",
+                externalLink: "https://mkraenz.github.io/parvenu/",
                 internalLink: "/latest-work/parvenu",
                 techStack: [],
                 teamSize: "2 persons",
@@ -197,7 +197,7 @@ export const content = {
                 role: "Product Manager, Frontend Developer",
                 description: `Open-source clone of 2013's viral game Flappy Bird developed by Dong Nguyen. 
                 Created fully with publicly licensed assets.`,
-                externalLink: "https://prosingularity.github.io/flappy-fly/",
+                externalLink: "https://mkraenz.github.io/flappy-fly/",
                 internalLink: "/latest-work/flappy-fly",
                 techStack: ["TypeScript", "JavaScript", "Phaser3", "HTML5"],
                 teamSize: "1 person",
