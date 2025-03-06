@@ -9,7 +9,7 @@ const Contact = () => {
       gap={8}
       minH={"100svh"}
       maxW={{ base: "100%", md: "70%" }}
-      as="article"
+      as={"article"}
       id={content.contact.id}
     >
       <VStack>

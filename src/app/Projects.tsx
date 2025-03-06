@@ -9,7 +9,7 @@ const Projects = () => {
       pb={16}
       id={content.latestWork.id}
       minH={"100svh"}
-      as="article"
+      as={"article"}
     >
       <Heading as={"h2"} size={{ base: "5xl", md: "7xl" }} textAlign={"center"}>
         {content.latestWork.title}

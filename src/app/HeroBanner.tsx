@@ -4,7 +4,7 @@ import { content } from "../content";
 
 const HeroBanner = () => {
   return (
-    <VStack gap={16} minH={"100svh"} justify={"center"} as="article">
+    <VStack gap={16} minH={"100svh"} justify={"center"} as={"article"}>
       <VStack>
         <Heading as={"h1"} size={"7xl"} textAlign={"center"}>
           {content.heading}
@@ -26,8 +26,8 @@ const HeroBanner = () => {
           <Link href={content.nav.contact.href}>{content.contact.title}</Link>
         </Button>
         <Link
-          target="_blank"
-          referrerPolicy="no-referrer"
+          target={"_blank"}
+          referrerPolicy={"no-referrer"}
           href={content.nav.linkedin.href}
         >
           <Button textTransform={"uppercase"} fontWeight={"bold"}>

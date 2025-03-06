@@ -5,14 +5,14 @@ import { content } from "../content";
 const Services = () => {
   return (
     <VStack
-      as="article"
+      as={"article"}
       gap={16}
       minH={"100svh"}
       maxW={{ base: "100%", md: "70%" }}
       id={content.services.id}
       pb={16}
     >
-      <VStack as="section">
+      <VStack as={"section"}>
         <Heading
           as={"h2"}
           size={{ base: "5xl", md: "7xl" }}
@@ -31,7 +31,7 @@ const Services = () => {
           <Text>{content.services.cta}</Text>
         </VStack>
         <Button
-          variant="solid"
+          variant={"solid"}
           textTransform={"uppercase"}
           fontWeight={"bold"}
           width={{ base: "100%", md: "200px" }}
@@ -44,8 +44,8 @@ const Services = () => {
         </Button>
       </VStack>
 
-      <VStack as="section">
-        <Heading as="h4" size="3xl">
+      <VStack as={"section"}>
+        <Heading as={"h4"} size={"3xl"}>
           {content.services.technologies.heading}
         </Heading>
         <Text>{content.services.technologies.label}</Text>

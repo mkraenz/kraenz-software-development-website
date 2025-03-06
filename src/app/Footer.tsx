@@ -3,16 +3,14 @@ import Link from "next/link";
 import { FC, PropsWithChildren } from "react";
 import { content } from "../content";
 
-type Props = {};
-
 const DimmedText: FC<PropsWithChildren> = ({ children }) => (
   <Text color={"var(--chakra-colors-fg-muted)"}>{children}</Text>
 );
 
-const Footer: FC<Props> = (props) => {
+const Footer: FC = () => {
   return (
     <HStack
-      as="footer"
+      as={"footer"}
       justifyContent={"center"}
       separator={<DimmedText>•</DimmedText>}
       px={2}
