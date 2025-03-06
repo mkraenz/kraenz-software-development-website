@@ -1,0 +1,61 @@
+:root {
+  --color-scheme: light;
+  --navbar-height: 48px;
+}
+
+[data-color-scheme="dark"] {
+  --color-scheme: dark;
+}
+
+html,
+body {
+  min-width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 48px;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  /** 48em = 768px is chakras < md breakpoint */
+  /* every project-grid-item except the first three, yes three (because n starts at 0 but the children are enumerated 1,2,3,... */
+  .project-grid .project-grid-item:nth-child(n + 4) {
+    display: none;
+  }
+}
+
+.icon-color-mode-dark {
+  display: none;
+}
+
+[data-color-scheme="dark"]
+  .project-card-image[data-invert-color-filter="true"] {
+  filter: invert(1);
+}
+[data-color-scheme="dark"] .icon-color-mode-light {
+  display: none;
+}
+
+[data-color-scheme="dark"] .icon-color-mode-dark {
+  display: block;
+}
