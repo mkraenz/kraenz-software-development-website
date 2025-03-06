@@ -10,6 +10,7 @@ const Services = () => {
       minH={"100svh"}
       maxW={{ base: "100%", md: "70%" }}
       id={content.services.id}
+      pb={16}
     >
       <VStack as="section">
         <Heading

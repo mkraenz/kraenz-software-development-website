@@ -1,4 +1,10 @@
 export const content = {
+  htmlMeta: {
+    title: "Mirco Kraenz",
+    description: "Full Stack Engineer - Available for Contract Work",
+    keywords:
+      "full stack developer, full stack entwickler, fintech, nodejs backend developer, typescript, Nodejs, fullstack, berlin typescript entwickler, typescript freelancer, typescript freiberufler, javascript, nestjs, software engineer, full stack engineer",
+  },
   heading: "Awesomeness for your Web\u00A0App",
   subHeading: "Mirco Kraenz",
   subsubHeading: "Full Stack Engineer - Available for Contract Work",
@@ -53,7 +59,7 @@ export const content = {
       submit: "Send",
       description:
         "Please provide your contact details below. I will get back to you within the next 48 hours. Please make sure to also check your spam folder.",
-      title: "Contact details",
+      title: "Via Contact Form",
     },
   },
   services: {

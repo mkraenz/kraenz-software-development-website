@@ -100,11 +100,11 @@ const Navbar = () => {
                 {content.nav.services.label}
               </NavLink>
             </Menu.MenuItem>
-            <Menu.MenuItem value={"3"}>
+            {/* <Menu.MenuItem value={"3"}>
               <NavLink href={content.nav.mission.href}>
                 {content.nav.mission.label}
               </NavLink>
-            </Menu.MenuItem>
+            </Menu.MenuItem> */}
             <Menu.MenuItem value={"4"}>
               <NavLink href={content.nav.contact.href}>
                 {content.nav.contact.label}
