@@ -13,8 +13,8 @@ const data = {
 
 const Imprint: FC = () => {
   return (
-    <VStack as="main" align={"start"} py={4} px={{ base: 4, md: 20 }}>
-      <Heading as="h1">Impressum</Heading>
+    <VStack as={"main"} align={"start"} py={4} px={{ base: 4, md: 20 }}>
+      <Heading as={"h1"}>Impressum</Heading>
       <p>Informationspflicht laut § 5 TMG.</p>
       <p></p>
       <p>{data.address.name}</p>
@@ -31,15 +31,15 @@ const Imprint: FC = () => {
       </p>
       <p>
         Quelle: Erstellt mit dem{" "}
-        <a title="Impressum Generator Deutschland" target="_blank" rel="follow">
+        <a title={"Impressum Generator Deutschland"} target={"_blank"} rel={"follow"}>
           Impressum Generator
         </a>{" "}
         von AdSimple in Kooperation mit{" "}
         <a
-          href="https://www.hashtagmann.de"
-          target="_blank"
-          rel="follow"
-          title=""
+          href={"https://www.hashtagmann.de"}
+          target={"_blank"}
+          rel={"follow"}
+          title={""}
         >
           hashtagmann.de
         </a>
@@ -53,9 +53,9 @@ const Imprint: FC = () => {
         Verbraucher haben die Möglichkeit, Beschwerden an die Online
         Streitbeilegungsplattform der Europäischen Kommission unter{" "}
         <a
-          href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&amp;lng=DE"
-          target="_blank"
-          rel="noopener"
+          href={"https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&amp;lng=DE"}
+          target={"_blank"}
+          rel={"noopener"}
         >
           http://ec.europa.eu/odr?tid=321139178
         </a>{" "}
@@ -73,9 +73,9 @@ const Imprint: FC = () => {
         uns korrekte und aktuelle Informationen bereitzustellen. Laut
         Telemediengesetz{" "}
         <a
-          href="https://www.gesetze-im-internet.de/tmg/__7.html?tid=321139178"
-          rel="noopener"
-          target="_blank"
+          href={"https://www.gesetze-im-internet.de/tmg/__7.html?tid=321139178"}
+          rel={"noopener"}
+          target={"_blank"}
         >
           (TMG) §7 (1)
         </a>{" "}
@@ -147,7 +147,7 @@ const Imprint: FC = () => {
         Wir werden die betroffenen Inhalte umgehend entfernen. Wir bitten im
         Voraus vielmals um Entschuldigung.
       </p>
-      <Heading as="h1" mt={16} id={data.privacyPolicy.id} wordBreak="break-all">
+      <Heading as={"h1"} mt={16} id={data.privacyPolicy.id} wordBreak={"break-all"}>
         Datenschutzerklärung
       </Heading>
       <h2>Datenschutz</h2>
@@ -155,9 +155,9 @@ const Imprint: FC = () => {
         Wir haben diese Datenschutzerklärung (Fassung 31.12.2019-321139178)
         verfasst, um Ihnen gemäß der Vorgaben der{" "}
         <a
-          href="https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679&amp;tid=321139178"
-          target="_blank"
-          rel="noopener"
+          href={"https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679&amp;tid=321139178"}
+          target={"_blank"}
+          rel={"noopener"}
         >
           Datenschutz-Grundverordnung (EU) 2016/679
         </a>{" "}
@@ -200,9 +200,9 @@ const Imprint: FC = () => {
         <br />
         Die Rechtsgrundlage besteht nach{" "}
         <a
-          href="https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&amp;from=DE&amp;tid=321139178"
-          target="_blank"
-          rel="noopener"
+          href={"https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&amp;from=DE&amp;tid=321139178"}
+          target={"_blank"}
+          rel={"noopener"}
         >
           Artikel 6  Absatz 1 f DSGVO
         </a>{" "}
@@ -341,27 +341,27 @@ const Imprint: FC = () => {
       </p>
       <p>
         <a
-          href="https://support.google.com/chrome/answer/95647?tid=321139178"
-          target="_blank"
-          rel="noopener"
+          href={"https://support.google.com/chrome/answer/95647?tid=321139178"}
+          target={"_blank"}
+          rel={"noopener"}
         >
           Chrome: Cookies in Chrome löschen, aktivieren und verwalten
         </a>
       </p>
       <p>
         <a
-          href="https://support.apple.com/de-at/guide/safari/sfri11471/mac?tid=321139178"
-          target="_blank"
-          rel="noopener"
+          href={"https://support.apple.com/de-at/guide/safari/sfri11471/mac?tid=321139178"}
+          target={"_blank"}
+          rel={"noopener"}
         >
           Safari: Verwalten von Cookies und Websitedaten mit Safari
         </a>
       </p>
       <p>
         <a
-          href="https://support.mozilla.org/de/kb/cookies-und-website-daten-in-firefox-loschen?tid=321139178"
-          target="_blank"
-          rel="noopener"
+          href={"https://support.mozilla.org/de/kb/cookies-und-website-daten-in-firefox-loschen?tid=321139178"}
+          target={"_blank"}
+          rel={"noopener"}
         >
           Firefox: Cookies löschen, um Daten zu entfernen, die Websites auf
           Ihrem Computer abgelegt haben
@@ -369,18 +369,18 @@ const Imprint: FC = () => {
       </p>
       <p>
         <a
-          href="https://support.microsoft.com/de-at/help/17442/windows-internet-explorer-delete-manage-cookies?tid=321139178"
-          target="_blank"
-          rel="noopener"
+          href={"https://support.microsoft.com/de-at/help/17442/windows-internet-explorer-delete-manage-cookies?tid=321139178"}
+          target={"_blank"}
+          rel={"noopener"}
         >
           Internet Explorer: Löschen und Verwalten von Cookies
         </a>
       </p>
       <p>
         <a
-          href="https://support.microsoft.com/de-at/help/4027947/windows-delete-cookies?tid=321139178"
-          target="_blank"
-          rel="noopener"
+          href={"https://support.microsoft.com/de-at/help/4027947/windows-delete-cookies?tid=321139178"}
+          target={"_blank"}
+          rel={"noopener"}
         >
           Microsoft Edge: Löschen und Verwalten von Cookies
         </a>
@@ -410,9 +410,9 @@ const Imprint: FC = () => {
         Wenn Sie mehr über Cookies wissen möchten und vor technischen
         Dokumentationen nicht zurückscheuen, empfehlen wir 
         <a
-          href="https://tools.ietf.org/html/rfc6265"
-          target="_blank"
-          rel="nofollow noopener"
+          href={"https://tools.ietf.org/html/rfc6265"}
+          target={"_blank"}
+          rel={"nofollow noopener"}
         >
           https://tools.ietf.org/html/rfc6265
         </a>
@@ -445,9 +445,9 @@ const Imprint: FC = () => {
       <p>
         Die Rechtsgrundlage besteht nach{" "}
         <a
-          href="https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&amp;from=DE&amp;tid=321139178"
-          target="_blank"
-          rel="noopener"
+          href={"https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&amp;from=DE&amp;tid=321139178"}
+          target={"_blank"}
+          rel={"noopener"}
         >
           Artikel 6  Absatz 1 a DSGVO
         </a>{" "}
@@ -485,9 +485,9 @@ const Imprint: FC = () => {
         Datenschutzrecht verstößt oder Ihre datenschutzrechtlichen Ansprüche
         sonst in einer Weise verletzt worden sind, können Sie sich an die{" "}
         <a
-          href="https://www.bfdi.bund.de/DE/Datenschutz/Ueberblick/MeineRechte/Artikel/BeschwerdeBeiDatenschutzbehoereden.html?tid=321139178"
-          target="_blank"
-          rel="noopener"
+          href={"https://www.bfdi.bund.de/DE/Datenschutz/Ueberblick/MeineRechte/Artikel/BeschwerdeBeiDatenschutzbehoereden.html?tid=321139178"}
+          target={"_blank"}
+          rel={"noopener"}
         >
           Bundesbeauftragte für den Datenschutz und die Informationsfreiheit
           (BfDI)
@@ -510,9 +510,9 @@ const Imprint: FC = () => {
         Wir verwenden https um Daten abhörsicher im Internet zu übertragen
         (Datenschutz durch Technikgestaltung{" "}
         <a
-          href="https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&amp;from=DE&#038;tid=321139178"
-          target="_blank"
-          rel="noopener"
+          href={"https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&amp;from=DE&#038;tid=321139178"}
+          target={"_blank"}
+          rel={"noopener"}
         >
           Artikel 25 Absatz 1 DSGVO
         </a>
@@ -547,9 +547,9 @@ const Imprint: FC = () => {
         Google Fonts (früher Google Web Fonts) ist ein interaktives Verzeichnis
         mit mehr als 800 Schriftarten, die die 
         <a
-          href="https://de.wikipedia.org/wiki/Google_LLC?tid=321139178"
-          target="_blank"
-          rel="noopener"
+          href={"https://de.wikipedia.org/wiki/Google_LLC?tid=321139178"}
+          target={"_blank"}
+          rel={"noopener"}
         >
           Google LLC
         </a>
@@ -648,9 +648,9 @@ const Imprint: FC = () => {
         automatisch an Google übermittelt. Um diese Daten vorzeitig löschen zu
         können, müssen Sie den Google-Support auf{" "}
         <a
-          href="https://support.google.com/?hl=de&amp;tid=321139178"
-          target="_blank"
-          rel="noopener"
+          href={"https://support.google.com/?hl=de&amp;tid=321139178"}
+          target={"_blank"}
+          rel={"noopener"}
         >
           https://support.google.com/?hl=de&amp;tid=321139178
         </a>{" "}
@@ -663,9 +663,9 @@ const Imprint: FC = () => {
         an Schriftarten zugreifen und so das Optimum für unsere Webseite
         rausholen. Mehr zu Google Fonts und weiteren Fragen finden Sie auf{" "}
         <a
-          href="https://developers.google.com/fonts/faq?tid=321139178"
-          target="_blank"
-          rel="noopener"
+          href={"https://developers.google.com/fonts/faq?tid=321139178"}
+          target={"_blank"}
+          rel={"noopener"}
         >
           https://developers.google.com/fonts/faq?tid=321139178
         </a>
@@ -679,9 +679,9 @@ const Imprint: FC = () => {
         Welche Daten grundsätzlich von Google erfasst werden und wofür diese
         Daten verwendet werden, können Sie auch auf{" "}
         <a
-          href="https://policies.google.com/privacy?hl=de&amp;tid=321139178"
-          target="_blank"
-          rel="noopener"
+          href={"https://policies.google.com/privacy?hl=de&amp;tid=321139178"}
+          target={"_blank"}
+          rel={"noopener"}
         >
           https://www.google.com/intl/de/policies/privacy/
         </a>{" "}
@@ -700,7 +700,7 @@ const Imprint: FC = () => {
       <p>
         Google Fonts (früher Google Web Fonts) ist ein interaktives Verzeichnis
         mit mehr als 800 Schriftarten, die die 
-        <a href="https://de.wikipedia.org/wiki/Google_LLC?tid=321139178">
+        <a href={"https://de.wikipedia.org/wiki/Google_LLC?tid=321139178"}>
           Google LLC
         </a>
          zur freien Verwendung bereitstellt. Mit Google Fonts könnte man die
@@ -715,7 +715,7 @@ const Imprint: FC = () => {
         Zugriff auf alle Schriftarten. Wir können also unlimitiert auf ein Meer
         an Schriftarten zugreifen und so das Optimum für unsere Webseite
         rausholen. Mehr zu Google Fonts und weiteren Fragen finden Sie auf{" "}
-        <a href="https://developers.google.com/fonts/faq?tid=321139178">
+        <a href={"https://developers.google.com/fonts/faq?tid=321139178"}>
           https://developers.google.com/fonts/faq?tid=321139178
         </a>
         .

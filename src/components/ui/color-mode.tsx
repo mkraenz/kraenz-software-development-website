@@ -66,8 +66,8 @@ export const ColorModeButton = React.forwardRef<
         },
       }}
     >
-      <LuMoon className="icon-color-mode-dark" />
-      <LuSun className="icon-color-mode-light" />
+      <LuMoon className={"icon-color-mode-dark"} />
+      <LuSun className={"icon-color-mode-light"} />
     </IconButton>
     // </ClientOnly>
   );

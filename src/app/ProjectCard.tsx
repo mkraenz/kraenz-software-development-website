@@ -12,8 +12,8 @@ const ProjectCard: FC<{
       href={project.externalLink}
       key={project.title}
       className={"project-grid-item"}
-      target="_blank"
-      rel="noopener noreferrer"
+      target={"_blank"}
+      rel={"noopener noreferrer"}
     >
       <Card.Root
         variant={"elevated"}
@@ -34,7 +34,7 @@ const ProjectCard: FC<{
             fill
             className={"project-card-image"}
             data-invert-color-filter={project.imgFilterIfDarkMode}
-            sizes="(max-width: 768px) 100vw, 33vw"
+            sizes={"(max-width: 768px) 100vw, 33vw"}
           />
         </Card.Header>
         <Card.Body>
