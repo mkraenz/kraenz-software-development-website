@@ -24,7 +24,7 @@ const ContactForm: FC = () => {
         <Fieldset.Content>
           <Field label={content.contact.form.name}>
             <InputGroup flex="1" w={"100%"} startElement={<LuUser />}>
-              <Input name="name" autoComplete="name" />
+              <Input name="name" autoComplete="name" required />
             </InputGroup>
           </Field>
 
@@ -34,13 +34,13 @@ const ContactForm: FC = () => {
               w={"100%"}
               startElement={<LuBriefcaseBusiness />}
             >
-              <Input name="company" autoComplete="organization" />
+              <Input name="company" autoComplete="organization" required />
             </InputGroup>
           </Field>
 
           <Field label={content.contact.form.email}>
             <InputGroup flex="1" w={"100%"} startElement={<LuMail />}>
-              <Input name="email" type="email" />
+              <Input name="email" type="email" autoComplete="email" required />
             </InputGroup>
           </Field>
 
@@ -51,6 +51,7 @@ const ContactForm: FC = () => {
           </Field>
         </Fieldset.Content>
 
+        {/* TODO implement submission */}
         <Button type="submit" width={{ base: "full", md: "200px" }}>
           {content.contact.form.submit}
         </Button>
