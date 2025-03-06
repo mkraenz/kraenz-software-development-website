@@ -8,7 +8,9 @@ import * as React from "react";
 import { LuMoon, LuSun } from "react-icons/lu";
 import { content } from "../../content";
 
-export function ColorModeProvider(props: ThemeProviderProps) {
+export type ColorModeProviderProps = ThemeProviderProps;
+
+export function ColorModeProvider(props: ColorModeProviderProps) {
   return (
     <ThemeProvider
       attribute={["class", "data-color-scheme"]}
