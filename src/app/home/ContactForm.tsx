@@ -7,8 +7,8 @@ import {
   LuMessageSquare,
   LuUser,
 } from "react-icons/lu";
-import { InputGroup } from "../components/ui/input-group";
-import { content } from "../content";
+import { InputGroup } from "../../components/ui/input-group";
+import { content } from "../../content";
 
 const ContactForm: FC = () => {
   return (
@@ -40,12 +40,21 @@ const ContactForm: FC = () => {
 
           <Field label={content.contact.form.email}>
             <InputGroup flex={"1"} w={"100%"} startElement={<LuMail />}>
-              <Input name={"email"} type={"email"} autoComplete={"email"} required />
+              <Input
+                name={"email"}
+                type={"email"}
+                autoComplete={"email"}
+                required
+              />
             </InputGroup>
           </Field>
 
           <Field label={content.contact.form.message}>
-            <InputGroup flex={"1"} w={"100%"} startElement={<LuMessageSquare />}>
+            <InputGroup
+              flex={"1"}
+              w={"100%"}
+              startElement={<LuMessageSquare />}
+            >
               <Input name={"message"} />
             </InputGroup>
           </Field>

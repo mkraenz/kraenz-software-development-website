@@ -1,7 +1,7 @@
 import { Button, Text, VStack } from "@chakra-ui/react";
 import Link from "next/link";
 import { FC } from "react";
-import { content } from "../content";
+import { content } from "../../content";
 
 const ContactMailTo: FC = () => {
   return (

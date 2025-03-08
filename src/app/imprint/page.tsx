@@ -1,8 +1,10 @@
 import { Grid, Heading, VStack } from "@chakra-ui/react";
+import { Metadata } from "next";
+import Head from "next/head";
 import { FC } from "react";
 import { content } from "../../content";
-import Footer from "../Footer";
-import Navbar from "../Navbar";
+import Footer from "../common/Footer";
+import Navbar from "../common/Navbar";
 
 const data = {
   email: content.email,
@@ -31,7 +33,11 @@ const Imprint: FC = () => {
       </p>
       <p>
         Quelle: Erstellt mit dem{" "}
-        <a title={"Impressum Generator Deutschland"} target={"_blank"} rel={"follow"}>
+        <a
+          title={"Impressum Generator Deutschland"}
+          target={"_blank"}
+          rel={"follow"}
+        >
           Impressum Generator
         </a>{" "}
         von AdSimple in Kooperation mit{" "}
@@ -53,7 +59,9 @@ const Imprint: FC = () => {
         Verbraucher haben die Möglichkeit, Beschwerden an die Online
         Streitbeilegungsplattform der Europäischen Kommission unter{" "}
         <a
-          href={"https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&amp;lng=DE"}
+          href={
+            "https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&amp;lng=DE"
+          }
           target={"_blank"}
           rel={"noopener"}
         >
@@ -147,7 +155,12 @@ const Imprint: FC = () => {
         Wir werden die betroffenen Inhalte umgehend entfernen. Wir bitten im
         Voraus vielmals um Entschuldigung.
       </p>
-      <Heading as={"h1"} mt={16} id={data.privacyPolicy.id} wordBreak={"break-all"}>
+      <Heading
+        as={"h1"}
+        mt={16}
+        id={data.privacyPolicy.id}
+        wordBreak={"break-all"}
+      >
         Datenschutzerklärung
       </Heading>
       <h2>Datenschutz</h2>
@@ -155,7 +168,9 @@ const Imprint: FC = () => {
         Wir haben diese Datenschutzerklärung (Fassung 31.12.2019-321139178)
         verfasst, um Ihnen gemäß der Vorgaben der{" "}
         <a
-          href={"https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679&amp;tid=321139178"}
+          href={
+            "https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679&amp;tid=321139178"
+          }
           target={"_blank"}
           rel={"noopener"}
         >
@@ -200,7 +215,9 @@ const Imprint: FC = () => {
         <br />
         Die Rechtsgrundlage besteht nach{" "}
         <a
-          href={"https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&amp;from=DE&amp;tid=321139178"}
+          href={
+            "https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&amp;from=DE&amp;tid=321139178"
+          }
           target={"_blank"}
           rel={"noopener"}
         >
@@ -350,7 +367,9 @@ const Imprint: FC = () => {
       </p>
       <p>
         <a
-          href={"https://support.apple.com/de-at/guide/safari/sfri11471/mac?tid=321139178"}
+          href={
+            "https://support.apple.com/de-at/guide/safari/sfri11471/mac?tid=321139178"
+          }
           target={"_blank"}
           rel={"noopener"}
         >
@@ -359,7 +378,9 @@ const Imprint: FC = () => {
       </p>
       <p>
         <a
-          href={"https://support.mozilla.org/de/kb/cookies-und-website-daten-in-firefox-loschen?tid=321139178"}
+          href={
+            "https://support.mozilla.org/de/kb/cookies-und-website-daten-in-firefox-loschen?tid=321139178"
+          }
           target={"_blank"}
           rel={"noopener"}
         >
@@ -369,7 +390,9 @@ const Imprint: FC = () => {
       </p>
       <p>
         <a
-          href={"https://support.microsoft.com/de-at/help/17442/windows-internet-explorer-delete-manage-cookies?tid=321139178"}
+          href={
+            "https://support.microsoft.com/de-at/help/17442/windows-internet-explorer-delete-manage-cookies?tid=321139178"
+          }
           target={"_blank"}
           rel={"noopener"}
         >
@@ -378,7 +401,9 @@ const Imprint: FC = () => {
       </p>
       <p>
         <a
-          href={"https://support.microsoft.com/de-at/help/4027947/windows-delete-cookies?tid=321139178"}
+          href={
+            "https://support.microsoft.com/de-at/help/4027947/windows-delete-cookies?tid=321139178"
+          }
           target={"_blank"}
           rel={"noopener"}
         >
@@ -445,7 +470,9 @@ const Imprint: FC = () => {
       <p>
         Die Rechtsgrundlage besteht nach{" "}
         <a
-          href={"https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&amp;from=DE&amp;tid=321139178"}
+          href={
+            "https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&amp;from=DE&amp;tid=321139178"
+          }
           target={"_blank"}
           rel={"noopener"}
         >
@@ -485,7 +512,9 @@ const Imprint: FC = () => {
         Datenschutzrecht verstößt oder Ihre datenschutzrechtlichen Ansprüche
         sonst in einer Weise verletzt worden sind, können Sie sich an die{" "}
         <a
-          href={"https://www.bfdi.bund.de/DE/Datenschutz/Ueberblick/MeineRechte/Artikel/BeschwerdeBeiDatenschutzbehoereden.html?tid=321139178"}
+          href={
+            "https://www.bfdi.bund.de/DE/Datenschutz/Ueberblick/MeineRechte/Artikel/BeschwerdeBeiDatenschutzbehoereden.html?tid=321139178"
+          }
           target={"_blank"}
           rel={"noopener"}
         >
@@ -510,7 +539,9 @@ const Imprint: FC = () => {
         Wir verwenden https um Daten abhörsicher im Internet zu übertragen
         (Datenschutz durch Technikgestaltung{" "}
         <a
-          href={"https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&amp;from=DE&#038;tid=321139178"}
+          href={
+            "https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&amp;from=DE&#038;tid=321139178"
+          }
           target={"_blank"}
           rel={"noopener"}
         >
@@ -724,13 +755,31 @@ const Imprint: FC = () => {
   );
 };
 
+export const metadata: Metadata = {
+  title: "Imprint and privacy policy",
+  description: "Imprint and privacy policy of kraenz.eu in German language",
+};
+
 const ImprintWithLayout = () => {
   return (
-    <Grid templateRows={"var(--navbar-height) min-content min-content"} pb={4}>
-      <Navbar />
-      <Imprint />
-      <Footer />
-    </Grid>
+    <>
+      <Head>
+        <link
+          rel="canonical"
+          href={content.imprint.canonicalTag}
+          key="canonical"
+        />
+      </Head>
+
+      <Grid
+        templateRows={"var(--navbar-height) min-content min-content"}
+        pb={4}
+      >
+        <Navbar home={false} />
+        <Imprint />
+        <Footer />
+      </Grid>
+    </>
   );
 };
 export default ImprintWithLayout;

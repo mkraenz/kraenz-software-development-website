@@ -1,5 +1,5 @@
 import { Grid, Heading, VStack } from "@chakra-ui/react";
-import { content } from "../content";
+import { content } from "../../content";
 import ProjectCard from "./ProjectCard";
 
 const Projects = () => {

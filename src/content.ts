@@ -1,9 +1,10 @@
 export const content = {
   htmlMeta: {
-    title: "Mirco Kraenz",
-    description: "Full Stack Engineer - Available for Contract Work",
+    title: "Mirco Kraenz - Full Stack Engineer - Available Now",
+    description:
+      "Looking for a Full Stack Engineer with 9+ years of industry experience to supplement your team? - Call Mirco Kraenz - Available for Contract Work",
     keywords:
-      "full stack developer, full stack entwickler, fintech, nodejs backend developer, typescript, Nodejs, fullstack, berlin typescript entwickler, typescript freelancer, typescript freiberufler, javascript, nestjs, software engineer, full stack engineer",
+      "full stack developer, full stack engineer, full stack entwickler, fintech, nodejs backend developer, typescript, Nodejs, fullstack, berlin typescript entwickler, typescript freelancer, typescript freiberufler, javascript, nestjs, software engineer, full stack engineer",
   },
   heading: "Awesomeness for your Web\u00A0App",
   subHeading: "Mirco Kraenz",
@@ -21,6 +22,7 @@ export const content = {
     country: "Germany",
   },
   nav: {
+    home: { label: "Home", href: "/" },
     projects: { label: "Projects", href: "#projects" },
     mission: { label: "Mission", href: "#mission" },
     services: { label: "Services", href: "#services" },
@@ -99,7 +101,10 @@ export const content = {
         "PostgreSQL",
         "PostGIS",
         "Firebase",
-        "CMS (Contentful)",
+        "Contentful CMS",
+        "RevenueCat",
+        "HubSpot",
+        "Mixpanel",
         "Redis",
         "RabbitMQ",
         "Kafka",
@@ -117,7 +122,7 @@ export const content = {
         "Pulumi",
         "Serverless Framework",
         "AWS SAM",
-        "AwS Cloudformation",
+        "AwS CloudFormation",
         "Docker",
         "Kubernetes",
         "SurveyJS",
@@ -331,6 +336,7 @@ export const content = {
     id: "privacy-policy",
   },
   imprint: {
+    canonicalTag: "https://kraenz.eu/imprint",
     images: [
       { filename: "liveeo-white-text.svg", owner: "LiveEO GmbH" },
       { filename: "liveeo-black-text.svg", owner: "LiveEO GmbH" },
@@ -344,6 +350,7 @@ export const content = {
     ],
   },
   meta: {
+    homeCanonicalTag: "https://kraenz.com/",
     keywords:
       "full stack developer, full stack entwickler, fintech, nodejs backend developer, typescript, Nodejs, fullstack, berlin typescript entwickler, typescript freelancer, typescript freiberufler, deutschland",
     description:

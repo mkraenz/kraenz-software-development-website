@@ -1,6 +1,6 @@
 import { Badge, Button, Flex, Heading, Text, VStack } from "@chakra-ui/react";
 import Link from "next/link";
-import { content } from "../content";
+import { content } from "../../content";
 
 const Services = () => {
   return (

@@ -3,20 +3,28 @@
 import { ColorModeButton } from "@/components/ui/color-mode";
 import * as Menu from "@/components/ui/menu";
 import { content } from "@/content";
-import { HStack, IconButton, useDisclosure } from "@chakra-ui/react";
+import { HStack, IconButton, Text, useDisclosure } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { FC, PropsWithChildren } from "react";
 import { LuGithub, LuLinkedin, LuMenu, LuX } from "react-icons/lu";
 import styles from "./navbar.module.css";
 
-const NavLink: FC<PropsWithChildren<{ href: string }>> = ({
+const NavLink: FC<PropsWithChildren<{ href: string; external?: boolean }>> = ({
   children,
   href,
+  external = false,
 }) => {
+  if (external) {
+    return (
+      <Link href={href} target="_blank" referrerPolicy="no-referrer">
+        <Text width="100%">{children}</Text>
+      </Link>
+    );
+  }
   return (
     <Link href={href}>
-      <p>{children}</p>
+      <Text width="100%">{children}</Text>
     </Link>
   );
 };
@@ -40,8 +48,17 @@ const NavLinkIcon: FC<{ icon: keyof typeof iconLookup; href: string }> = ({
   );
 };
 
-const Navbar = () => {
-  const { onToggle, open } = useDisclosure();
+const Navbar: FC<{ home?: boolean }> = ({ home = true }) => {
+  const { onToggle, open, onClose } = useDisclosure();
+  const internalLinks = home
+    ? [
+        content.nav.projects,
+        // content.nav.mission,
+        content.nav.services,
+        content.nav.contact,
+      ]
+    : [content.nav.home];
+
   return (
     <HStack as={"nav"} justifyContent={"space-between"} px={4}>
       <Link href={"/"}>
@@ -57,25 +74,18 @@ const Navbar = () => {
 
       <HStack display={{ base: "none", md: "flex" }}>
         <ColorModeButton />
-        <NavLink href={content.nav.projects.href}>
-          {content.nav.projects.label}
-        </NavLink>
-        {/* <NavLink href={content.nav.mission.href}>
-          {content.nav.mission.label}
-        </NavLink> */}
-        <NavLink href={content.nav.services.href}>
-          {content.nav.services.label}
-        </NavLink>
-        <NavLink href={content.nav.contact.href}>
-          {content.nav.contact.label}
-        </NavLink>
+        {internalLinks.map((link) => (
+          <NavLink key={link.href} href={link.href}>
+            {link.label}
+          </NavLink>
+        ))}
         <NavLinkIcon icon={"github"} href={content.nav.github.href} />
         <NavLinkIcon icon={"linkedin"} href={content.nav.linkedin.href} />
       </HStack>
 
       <HStack display={{ base: "flex", md: "none" }}>
         <ColorModeButton />
-        <Menu.MenuRoot onSelect={onToggle}>
+        <Menu.MenuRoot onSelect={onToggle} onExitComplete={onClose}>
           <Menu.MenuTrigger asChild>
             <IconButton
               aria-label={
@@ -90,35 +100,30 @@ const Navbar = () => {
             </IconButton>
           </Menu.MenuTrigger>
           <Menu.MenuContent minW={"100vw"}>
-            <Menu.MenuItem value={"1"}>
-              <NavLink href={content.nav.projects.href}>
-                {content.nav.projects.label}
-              </NavLink>
+            {internalLinks.map((link) => (
+              <Menu.MenuItem value={link.href} key={link.href} asChild>
+                <Link href={link.href}>
+                  <Text>{link.label}</Text>
+                </Link>
+              </Menu.MenuItem>
+            ))}
+            <Menu.MenuItem value={content.nav.github.href} asChild>
+              <Link
+                href={content.nav.linkedin.href}
+                target="_blank"
+                referrerPolicy="no-referrer"
+              >
+                <Text>{content.nav.github.label}</Text>
+              </Link>
             </Menu.MenuItem>
-            <Menu.MenuItem value={"2"}>
-              <NavLink href={content.nav.services.href}>
-                {content.nav.services.label}
-              </NavLink>
-            </Menu.MenuItem>
-            {/* <Menu.MenuItem value={"3"}>
-              <NavLink href={content.nav.mission.href}>
-                {content.nav.mission.label}
-              </NavLink>
-            </Menu.MenuItem> */}
-            <Menu.MenuItem value={"4"}>
-              <NavLink href={content.nav.contact.href}>
-                {content.nav.contact.label}
-              </NavLink>
-            </Menu.MenuItem>
-            <Menu.MenuItem value={"5"}>
-              <NavLink href={content.nav.github.href}>
-                {content.nav.github.label}
-              </NavLink>
-            </Menu.MenuItem>
-            <Menu.MenuItem value={"6"}>
-              <NavLink href={content.nav.linkedin.href}>
-                {content.nav.linkedin.label}
-              </NavLink>
+            <Menu.MenuItem value={content.nav.linkedin.href} asChild>
+              <Link
+                href={content.nav.linkedin.href}
+                target="_blank"
+                referrerPolicy="no-referrer"
+              >
+                <Text>{content.nav.linkedin.label}</Text>
+              </Link>
             </Menu.MenuItem>
           </Menu.MenuContent>
         </Menu.MenuRoot>

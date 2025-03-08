@@ -1,6 +1,6 @@
 import { Button, Heading, HStack, VStack } from "@chakra-ui/react";
 import Link from "next/link";
-import { content } from "../content";
+import { content } from "../../content";
 
 const HeroBanner = () => {
   return (

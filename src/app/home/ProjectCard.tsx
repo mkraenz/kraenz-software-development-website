@@ -2,7 +2,7 @@ import { Card, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
-import { content } from "../content";
+import { content } from "../../content";
 
 const ProjectCard: FC<{
   project: (typeof content.latestWork.cards)[number];
