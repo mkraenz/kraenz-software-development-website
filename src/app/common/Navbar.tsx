@@ -17,14 +17,14 @@ const NavLink: FC<PropsWithChildren<{ href: string; external?: boolean }>> = ({
 }) => {
   if (external) {
     return (
-      <Link href={href} target="_blank" referrerPolicy="no-referrer">
-        <Text width="100%">{children}</Text>
+      <Link href={href} target={"_blank"} referrerPolicy={"no-referrer"}>
+        <Text width={"100%"}>{children}</Text>
       </Link>
     );
   }
   return (
     <Link href={href}>
-      <Text width="100%">{children}</Text>
+      <Text width={"100%"}>{children}</Text>
     </Link>
   );
 };
@@ -110,8 +110,8 @@ const Navbar: FC<{ home?: boolean }> = ({ home = true }) => {
             <Menu.MenuItem value={content.nav.github.href} asChild>
               <Link
                 href={content.nav.linkedin.href}
-                target="_blank"
-                referrerPolicy="no-referrer"
+                target={"_blank"}
+                referrerPolicy={"no-referrer"}
               >
                 <Text>{content.nav.github.label}</Text>
               </Link>
@@ -119,8 +119,8 @@ const Navbar: FC<{ home?: boolean }> = ({ home = true }) => {
             <Menu.MenuItem value={content.nav.linkedin.href} asChild>
               <Link
                 href={content.nav.linkedin.href}
-                target="_blank"
-                referrerPolicy="no-referrer"
+                target={"_blank"}
+                referrerPolicy={"no-referrer"}
               >
                 <Text>{content.nav.linkedin.label}</Text>
               </Link>

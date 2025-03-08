@@ -765,9 +765,9 @@ const ImprintWithLayout = () => {
     <>
       <Head>
         <link
-          rel="canonical"
+          rel={"canonical"}
           href={content.imprint.canonicalTag}
-          key="canonical"
+          key={"canonical"}
         />
       </Head>
 

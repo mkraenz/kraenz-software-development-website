@@ -13,9 +13,9 @@ const HomePage = () => {
     <>
       <Head>
         <link
-          rel="canonical"
+          rel={"canonical"}
           href={content.meta.homeCanonicalTag}
-          key="canonical"
+          key={"canonical"}
         />
       </Head>
 
