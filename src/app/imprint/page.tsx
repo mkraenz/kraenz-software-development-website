@@ -1,6 +1,5 @@
 import { Grid, Heading, VStack } from "@chakra-ui/react";
 import { Metadata } from "next";
-import Head from "next/head";
 import { FC } from "react";
 import { content } from "../../content";
 import Footer from "../common/Footer";
@@ -759,28 +758,18 @@ const Imprint: FC = () => {
 export const metadata: Metadata = {
   title: "Imprint and privacy policy",
   description: "Imprint and privacy policy of kraenz.eu in German language",
+  alternates: {
+    canonical: content.imprint.canonicalTag,
+  },
 };
 
 const ImprintWithLayout = () => {
   return (
-    <>
-      <Head>
-        <link
-          rel={"canonical"}
-          href={content.imprint.canonicalTag}
-          key={"canonical"}
-        />
-      </Head>
-
-      <Grid
-        templateRows={"var(--navbar-height) min-content min-content"}
-        pb={4}
-      >
-        <Navbar home={false} />
-        <Imprint />
-        <Footer />
-      </Grid>
-    </>
+    <Grid templateRows={"var(--navbar-height) min-content min-content"} pb={4}>
+      <Navbar home={false} />
+      <Imprint />
+      <Footer />
+    </Grid>
   );
 };
 export default ImprintWithLayout;
