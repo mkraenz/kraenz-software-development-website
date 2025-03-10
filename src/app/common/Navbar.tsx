@@ -60,7 +60,13 @@ const Navbar: FC<{ home?: boolean }> = ({ home = true }) => {
     : [content.nav.home];
 
   return (
-    <HStack as={"nav"} justifyContent={"space-between"} px={4}>
+    <HStack
+      as={"nav"}
+      justifyContent={"space-between"}
+      px={4}
+      className={"hero-animation-durations hero-rest"}
+      data-animated={home}
+    >
       <Link href={"/"}>
         <Image
           width={108}

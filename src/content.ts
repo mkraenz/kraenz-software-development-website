@@ -7,8 +7,8 @@ export const content = {
       "full stack developer, full stack engineer, full stack entwickler, fintech, nodejs backend developer, typescript, Nodejs, fullstack, berlin typescript entwickler, typescript freelancer, typescript freiberufler, javascript, nestjs, software engineer, full stack engineer",
   },
   heading: "Awesomeness for your Web\u00A0App",
-  subHeading: "Mirco Kraenz",
-  subsubHeading: "Full Stack Engineer - Available for Contract Work",
+  subHeading: "Mirco Kraenz • Full Stack Engineer",
+  subsubHeading: "Available for Contract Work",
   academicDegree: "M.Sc. Mathematics",
   landingPageSecondaryButton: "CV on LinkedIn",
   logo: {
