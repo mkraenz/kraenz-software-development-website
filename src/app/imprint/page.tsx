@@ -100,7 +100,8 @@ const Imprint: FC = () => {
         Unsere Verpflichtungen zur Entfernung von Informationen oder zur
         Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen
         aufgrund von gerichtlichen oder behördlichen Anordnungen bleiben auch im
-        Falle unserer Nichtverantwortlichkeit nach den §§ 8 bis 10 unberührt.{" "}
+        Falle unserer Nichtverantwortlichkeit nach den §§ 8 bis 10
+        unberührt.{" "}
       </p>
       <p>
         Sollten Ihnen problematische oder rechtswidrige Inhalte auffallen, bitte
