@@ -357,11 +357,14 @@ export const content = {
       "Awesomeness for your Web App - Mirco Kraenz - Freelance Full Stack Developer - Now Available",
     jsonld: {
       home: {
-        type: "Person",
+        "@type": "Person",
         name: "Mirco Kraenz",
         image: "https://kraenz.eu/logo/profile.jpg",
         description:
-          "Full Stack Engineer · Contractor · System Thinker · TypeScript NestJS Nodejs React AWS Cloud DevOps · M.Sc. Mathematics · Live Coding Streamer",
+          "Mirco Kraenz is a German Full Stack Engineer. He considers himself a System Thinker. As a contractor, his primary business partners are Start-Ups in the categories Health and Green Technology. His core tech stack is TypeScript, NestJS, Nodejs, React, AWS Cloud, and DevOps. He graduated cum laude gaining the title of Master of Science Mathematics from his Alma Mater Technische Universität Berlin. He wrote his Master's thesis in Osaka, Japan supervised by Osaka University Professor Kenichi Ohshika and TU Berlin Professor Boris Springborn. He is also a Live Coding Streamer on Twitch.",
+        jobTitle: "Freelance Full Stack Engineer",
+        country: "Germany",
+        homepage: "https://kraenz.eu",
       },
     },
   },

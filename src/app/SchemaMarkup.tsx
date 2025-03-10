@@ -3,13 +3,9 @@ import { content } from "../content";
 
 /** https://en.wikipedia.org/wiki/Schema.org */
 const SeoSchemaMarkup: FC = () => {
-  const homeJsonld = content.meta.jsonld.home;
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": homeJsonld.type,
-    name: homeJsonld.name,
-    image: homeJsonld.image,
-    description: homeJsonld.description,
+    ...content.meta.jsonld.home,
   };
 
   return (
