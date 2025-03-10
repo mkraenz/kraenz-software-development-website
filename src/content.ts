@@ -355,5 +355,14 @@ export const content = {
       "full stack developer, full stack entwickler, fintech, nodejs backend developer, typescript, Nodejs, fullstack, berlin typescript entwickler, typescript freelancer, typescript freiberufler, deutschland",
     description:
       "Awesomeness for your Web App - Mirco Kraenz - Freelance Full Stack Developer - Now Available",
+    jsonld: {
+      home: {
+        type: "Person",
+        name: "Mirco Kraenz",
+        image: "https://kraenz.eu/logo/profile.jpg",
+        description:
+          "Full Stack Engineer · Contractor · System Thinker · TypeScript NestJS Nodejs React AWS Cloud DevOps · M.Sc. Mathematics · Live Coding Streamer",
+      },
+    },
   },
 };

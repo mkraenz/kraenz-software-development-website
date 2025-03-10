@@ -7,6 +7,7 @@ import Contact from "./home/Contact";
 import HeroBanner from "./home/HeroBanner";
 import Projects from "./home/Projects";
 import Services from "./home/Services";
+import SeoSchemaMarkup from "./SchemaMarkup";
 
 export const metadata: Metadata = {
   alternates: {
@@ -16,16 +17,22 @@ export const metadata: Metadata = {
 
 const HomePage = () => {
   return (
-    <Grid templateRows={"var(--navbar-height) min-content min-content"} pb={4}>
-      <Navbar />
-      <VStack as={"main"} px={{ md: 12, base: 4 }}>
-        <HeroBanner />
-        <Projects />
-        <Services />
-        <Contact />
-      </VStack>
-      <Footer />
-    </Grid>
+    <>
+      <SeoSchemaMarkup />
+      <Grid
+        templateRows={"var(--navbar-height) min-content min-content"}
+        pb={4}
+      >
+        <Navbar />
+        <VStack as={"main"} px={{ md: 12, base: 4 }}>
+          <HeroBanner />
+          <Projects />
+          <Services />
+          <Contact />
+        </VStack>
+        <Footer />
+      </Grid>
+    </>
   );
 };
 
