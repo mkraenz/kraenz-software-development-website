@@ -173,8 +173,7 @@ export const content = {
       {
         title: "LiveEO ",
         imgAlt: "LiveEO logo",
-        // TODO dark mode looks bad. invert filter doesnt work bc the green dot also gets inverted to magenta... theoretically i can include both liveeo-black-text.svg and liveeo-white-text.svg and again use the color-scheme attribute selector to show the right one
-        imgPath: "/latest-work/liveeo-black-text.svg",
+        imgPath: "/latest-work/liveeo-min.png",
         role: "Freelance Full Stack Engineer, DevOps, Architect",
         description: `Supply Chain Compliance solution "TradeAware" help businesses implement the EU Deforestation Regulation to protect our world's forests and biodiversity.`,
         externalLink: "https://www.live-eo.com/product/tradeaware",
@@ -204,6 +203,18 @@ export const content = {
         internalLink: "/recent-projects/coachhub",
         techStack: ["NestJS", "GraphQL", "Svelte", "Agile", "Lean", "Kanban"], // TODO add details page
         teamSize: "20-50 people",
+      },
+      {
+        title: "My Little Bubble Tea Shop",
+        imgAlt: "Screenshot of My Little Bubble Tea Shop",
+        imgPath: "/latest-work/bubble-tea-2.png",
+        role: "Game Developer, Designer",
+        description:
+          "HTML 5 Game where you manage your own little Bubble Tea Shop for Desktop and Mobile. Entry to Glamjam 2025. Written purely in Svelte, HTML and CSS.",
+        externalLink: "https://mkraenz.itch.io/my-little-bubble-tea-shop",
+        internalLink: "/recent-projects/my-little-bubble-tea-shop",
+        teamSize: "1 person",
+        techStack: ["Svelte", "HTML 5", "CSS", "CSS Animations"],
       },
       {
         title: "Daily Questions",
