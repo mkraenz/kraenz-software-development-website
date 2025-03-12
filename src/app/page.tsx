@@ -1,6 +1,6 @@
+import { content } from "@/content";
 import { Grid, VStack } from "@chakra-ui/react";
 import { Metadata } from "next";
-import { content } from "../content";
 import Footer from "./common/Footer";
 import Navbar from "./common/Navbar";
 import Contact from "./home/Contact";

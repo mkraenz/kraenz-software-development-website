@@ -1,7 +1,7 @@
+import { content } from "@/content";
 import { HStack, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { FC, PropsWithChildren } from "react";
-import { content } from "../../content";
 
 const DimmedText: FC<PropsWithChildren> = ({ children }) => (
   <Text color={"var(--chakra-colors-fg-muted)"}>{children}</Text>

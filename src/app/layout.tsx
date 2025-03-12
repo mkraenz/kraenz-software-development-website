@@ -1,6 +1,6 @@
 import { Provider } from "@/components/ui/provider";
+import { content } from "@/content";
 import type { Metadata } from "next";
-import { content } from "../content";
 import "./globals.css";
 
 export const metadata: Metadata = {

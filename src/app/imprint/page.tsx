@@ -1,9 +1,9 @@
+import Footer from "@/app/common/Footer";
+import Navbar from "@/app/common/Navbar";
+import { content } from "@/content";
 import { Grid, Heading, VStack } from "@chakra-ui/react";
 import { Metadata } from "next";
 import { FC } from "react";
-import { content } from "../../content";
-import Footer from "../common/Footer";
-import Navbar from "../common/Navbar";
 
 const data = {
   email: content.email,

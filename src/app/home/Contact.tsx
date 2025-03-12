@@ -1,8 +1,8 @@
 "use client";
 
+import { content } from "@/content";
+import { useInView } from "@/hooks/useInView";
 import { Grid, Heading, VStack } from "@chakra-ui/react";
-import { content } from "../../content";
-import { useInView } from "../../hooks/useInView";
 import ContactForm from "./ContactForm";
 import ContactMailTo from "./ContactMailTo";
 

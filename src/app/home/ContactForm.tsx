@@ -1,4 +1,6 @@
 import { Field } from "@/components/ui/field";
+import { InputGroup } from "@/components/ui/input-group";
+import { content } from "@/content";
 import { Button, Fieldset, Input, Stack } from "@chakra-ui/react";
 import { FC } from "react";
 import {
@@ -7,8 +9,6 @@ import {
   LuMessageSquare,
   LuUser,
 } from "react-icons/lu";
-import { InputGroup } from "../../components/ui/input-group";
-import { content } from "../../content";
 
 const ContactForm: FC = () => {
   return (

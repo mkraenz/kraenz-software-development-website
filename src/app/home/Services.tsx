@@ -1,9 +1,9 @@
 "use client";
 
+import { content } from "@/content";
+import { useInView } from "@/hooks/useInView";
 import { Badge, Button, Flex, Heading, Text, VStack } from "@chakra-ui/react";
 import Link from "next/link";
-import { content } from "../../content";
-import { useInView } from "../../hooks/useInView";
 
 const Services = () => {
   const servicesInView = useInView(0.25);

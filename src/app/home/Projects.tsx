@@ -1,8 +1,8 @@
 "use client";
 
+import { content } from "@/content";
+import { useInView } from "@/hooks/useInView";
 import { Grid, Heading, VStack } from "@chakra-ui/react";
-import { content } from "../../content";
-import { useInView } from "../../hooks/useInView";
 import ProjectCard from "./ProjectCard";
 
 const Projects = () => {

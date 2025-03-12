@@ -1,5 +1,5 @@
+import { content } from "@/content";
 import { FC } from "react";
-import { content } from "../content";
 
 /** https://en.wikipedia.org/wiki/Schema.org */
 const SeoSchemaMarkup: FC = () => {
