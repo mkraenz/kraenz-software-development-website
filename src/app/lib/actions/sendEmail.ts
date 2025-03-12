@@ -7,7 +7,8 @@ import { z } from "zod";
 
 const formattedDatetime = () => {
   const [dateAndHour, min, _rest] = new Date().toISOString().split(":");
-  return `${dateAndHour}${min}Z`;
+  const [data, hour] = dateAndHour.split("T");
+  return `${data} ${hour}:${min} GMT`;
 };
 
 const EnvVarSchema = z.object({
@@ -82,7 +83,22 @@ const sendEmailToMeAndConfirmationToContact = async (contact: Contact) => {
     to: contact.email,
     subject: "Request confirmation: Thank you for reaching out!",
     text: `Hi ${contact.name}, Nice to meet you. This is to confirm that your contact request was received. I will get back to you within the next 24 hours. So please stay tuned! :) Best, Mirco Kraenz - Full Stack Engineer - Available for Contract Work`,
-    html: `Hi ${contact.name},<br/><br/>Nice to meet you!<br/><br/>This is to confirm that your contact request was received.<br/><b>I will get back to you within the next 24 hours.</b><br/>So please stay tuned! :) <br/><br/>Best,<br/><br/> <b>Mirco Kraenz - Full Stack Engineer - Available for Contract Work</b>`,
+    html: `Hi ${contact.name},<br/><br/>
+    
+    Nice to meet you!<br/><br/>
+    
+    This is to confirm that your contact request was received.<br/>
+    <b>I will get back to you within the next 24 hours.</b><br/>
+    So please stay tuned! :) <br/><br/>
+    
+    Best,<br/><br/> 
+    
+    <b>Mirco Kraenz</b><br/>
+    Full-Stack Engineer | Freelancer | Kraenz Software Development<br/>
+
+    <table cellpadding="0" cellspacing="0" style="vertical-align:-webkit-baseline-middle;font-family:Arial"><tbody><tr height="25" style="vertical-align:middle"><td width="30" style="vertical-align:middle"><table cellpadding="0" cellspacing="0" style="vertical-align:-webkit-baseline-middle;font-family:Arial"><tbody><tr><td style="vertical-align:bottom"><span color="#F2547D" width="11" style="display:block;background-color:rgb(242,84,125)"><img src="https://ci3.googleusercontent.com/meips/ADKq_NZvHSmYu2-NCG_NPzpk6NN_gLctE_NdNQKl7PyZGOXUs0vhhus3sq6WQfnK-AYvhuwDc7H9-s1s_Oh-WV_dXppqqemufsUxJXZX8qrOyxW_1Ers_LaxvK1fdZqA5notV1_TjaMGyU0Sd9UgtjvB=s0-d-e1-ft#https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/link-icon-2x.png" color="#F2547D" width="13" style="display:block" class="CToWUd" data-bit="iit"></span></td></tr></tbody></table></td><td style="padding:0px"><font color="#000000"><a href="http://kraenz.eu/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://kraenz.eu/&amp;source=gmail&amp;ust=1741856321656000&amp;usg=AOvVaw28e5y-e_OSDjpW2cun_DDm">kraenz.eu</a></font></td></tr></tbody></table>
+<img width="96" height="31" src="https://ci3.googleusercontent.com/mail-sig/AIorK4wRK9mAgiTpr6M-GHxQm96-_AdpkB1CCRZulfg31u59kMg5tq3oe0rxrtiC4UimbVtTWdDWkrTxz9GW" class="CToWUd" data-bit="iit">
+`,
   });
 
   const [selfEmail, _confirmationEmail] = await Promise.allSettled([
