@@ -18,6 +18,14 @@ const eslintConfig = [
         { props: "always", children: "never", propElementValues: "always" },
       ],
       "no-useless-rename": "error",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          caughtErrors: "none",
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+        },
+      ],
     },
   },
 ];

@@ -104,10 +104,10 @@ body {
   animation-delay: var(--hero-rest-animation-delay);
 }
 
-@keyframes slide-up {
+@keyframes slide-up-a-little {
   from {
     opacity: 0;
-    transform: translateY(30%);
+    transform: translateY(20%);
   }
   to {
     opacity: 1;
@@ -124,4 +124,12 @@ body {
     opacity: 1;
     transform: translateY(0px);
   }
+}
+
+.slide-up {
+  opacity: 0;
+}
+.slide-up[data-animated="true"] {
+  opacity: 0;
+  animation: slide-up-a-little 0.3s ease-in-out forwards;
 }

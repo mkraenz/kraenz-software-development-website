@@ -1,8 +1,13 @@
+"use client";
+
 import { Badge, Button, Flex, Heading, Text, VStack } from "@chakra-ui/react";
 import Link from "next/link";
 import { content } from "../../content";
+import { useInView } from "../../hooks/useInView";
 
 const Services = () => {
+  const servicesInView = useInView(0.25);
+  const techsInView = useInView(0.25);
   return (
     <VStack
       as={"article"}
@@ -12,7 +17,12 @@ const Services = () => {
       id={content.services.id}
       pb={16}
     >
-      <VStack as={"section"}>
+      <VStack
+        as={"section"}
+        ref={servicesInView.ref}
+        className={"slide-up"}
+        data-animated={servicesInView.inView}
+      >
         <Heading
           as={"h2"}
           size={{ base: "5xl", md: "7xl" }}
@@ -44,7 +54,12 @@ const Services = () => {
         </Button>
       </VStack>
 
-      <VStack as={"section"}>
+      <VStack
+        as={"section"}
+        ref={techsInView.ref}
+        className={"slide-up"}
+        data-animated={techsInView.inView}
+      >
         <Heading as={"h4"} size={"3xl"}>
           {content.services.technologies.heading}
         </Heading>

@@ -1,19 +1,26 @@
+"use client";
+
 import { Card, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 import { content } from "../../content";
+import { useInView } from "../../hooks/useInView";
 
 const ProjectCard: FC<{
   project: (typeof content.latestWork.cards)[number];
 }> = ({ project }) => {
+  const { ref, inView } = useInView(0.5);
+
   return (
     <Link
       href={project.externalLink}
       key={project.title}
-      className={"project-grid-item"}
+      className={"project-grid-item slide-up"}
       target={"_blank"}
       rel={"noopener noreferrer"}
+      data-animated={inView}
+      ref={ref}
     >
       <Card.Root
         variant={"elevated"}
