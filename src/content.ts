@@ -6,6 +6,7 @@ export const content = {
     keywords:
       "full stack developer, full stack engineer, full stack entwickler, fintech, nodejs backend developer, typescript, Nodejs, fullstack, berlin typescript entwickler, typescript freelancer, typescript freiberufler, javascript, nestjs, software engineer, full stack engineer",
   },
+  // for emails, see sendEmail.ts
   heading: "Awesomeness for your Web\u00A0App",
   subHeading: "Mirco Kraenz • Full Stack Engineer",
   subsubHeading: "Available for Contract Work",
@@ -342,6 +343,16 @@ export const content = {
       href: "/imprint#privacy-policy",
     },
     copyright: "Copyright © Mirco Kraenz 2025",
+  },
+  thankyou: {
+    heading: "Thank you for your request!",
+    description:
+      "I will get back to you within the next 24 hours. A confirmation email has been sent to you. Please make sure to also check your spam folder. Stay tuned!",
+    backToHomeButton: "Back to Home",
+    meta: {
+      title: "Thank you!",
+      description: "Thank you for reaching out to Mirco Kraenz",
+    },
   },
   privacyPolicy: {
     id: "privacy-policy",

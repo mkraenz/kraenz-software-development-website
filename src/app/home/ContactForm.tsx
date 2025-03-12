@@ -1,8 +1,11 @@
+"use client";
+
+import sendEmail from "@/app/lib/actions/sendEmail";
 import { Field } from "@/components/ui/field";
 import { InputGroup } from "@/components/ui/input-group";
 import { content } from "@/content";
 import { Button, Fieldset, Input, Stack } from "@chakra-ui/react";
-import { FC } from "react";
+import { useFormStatus } from "react-dom";
 import {
   LuBriefcaseBusiness,
   LuMail,
@@ -10,9 +13,23 @@ import {
   LuUser,
 } from "react-icons/lu";
 
-const ContactForm: FC = () => {
+const SubmitButton = () => {
+  const { pending } = useFormStatus();
+
   return (
-    <form>
+    <Button
+      type={"submit"}
+      width={{ base: "full", md: "200px" }}
+      loading={pending}
+    >
+      {content.contact.form.submit}
+    </Button>
+  );
+};
+
+const ContactForm = () => {
+  return (
+    <form action={sendEmail}>
       <Fieldset.Root size={"lg"} maxW={"md"}>
         <Stack>
           <Fieldset.Legend>{content.contact.form.title}</Fieldset.Legend>
@@ -60,10 +77,7 @@ const ContactForm: FC = () => {
           </Field>
         </Fieldset.Content>
 
-        {/* TODO implement submission */}
-        <Button type={"submit"} width={{ base: "full", md: "200px" }}>
-          {content.contact.form.submit}
-        </Button>
+        <SubmitButton />
       </Fieldset.Root>
     </form>
   );

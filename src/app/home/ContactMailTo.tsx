@@ -10,7 +10,7 @@ const ContactMailTo: FC = () => {
       <Text fontSize={"sm"} color={"fg.muted"}>
         {content.contact.mailto.description}
       </Text>
-      <Button w={{ base: "100%", md: "200px" }} asChild>
+      <Button width={{ base: "100%", md: "200px" }} asChild>
         <Link
           href={content.contact.mailto.href}
           target={"_blank"}

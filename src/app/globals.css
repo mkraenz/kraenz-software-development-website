@@ -71,12 +71,12 @@ body {
   --hero-h2-finished: calc(
     var(--hero-h2-animation-delay) + var(--hero-h2-animation-duration)
   );
-  --hero-h3-animation-delay: calc(var(--hero-h2-finished) + 500ms);
+  --hero-h3-animation-delay: calc(var(--hero-h2-finished) + 300ms);
   --hero-h3-animation-duration: 0.3s;
   --hero-h3-finished: calc(
     var(--hero-h3-animation-delay) + var(--hero-h3-animation-duration)
   );
-  --hero-rest-animation-delay: calc(var(--hero-h3-finished) + 300ms);
+  --hero-rest-animation-delay: calc(var(--hero-h3-finished) + 500ms);
   --hero-rest-animation-duration: 0.3s;
 }
 
