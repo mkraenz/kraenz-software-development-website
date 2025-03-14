@@ -1,8 +1,6 @@
 import { content } from "@/content";
-import { Grid, VStack } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
 import { Metadata } from "next";
-import Footer from "./common/Footer";
-import Navbar from "./common/Navbar";
 import Contact from "./home/Contact";
 import HeroBanner from "./home/HeroBanner";
 import Projects from "./home/Projects";
@@ -19,19 +17,12 @@ const HomePage = () => {
   return (
     <>
       <SeoSchemaMarkup />
-      <Grid
-        templateRows={"var(--navbar-height) min-content min-content"}
-        pb={4}
-      >
-        <Navbar />
-        <VStack as={"main"} px={{ md: 12, base: 4 }}>
-          <HeroBanner />
-          <Projects />
-          <Services />
-          <Contact />
-        </VStack>
-        <Footer />
-      </Grid>
+      <VStack as={"main"} px={{ md: 12, base: 4 }}>
+        <HeroBanner />
+        <Projects />
+        <Services />
+        <Contact />
+      </VStack>
     </>
   );
 };

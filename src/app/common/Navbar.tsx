@@ -6,6 +6,7 @@ import { content } from "@/content";
 import { HStack, IconButton, Text, useDisclosure } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FC, PropsWithChildren } from "react";
 import { LuGithub, LuLinkedin, LuMenu, LuX } from "react-icons/lu";
 import styles from "./navbar.module.css";
@@ -48,8 +49,10 @@ const NavLinkIcon: FC<{ icon: keyof typeof iconLookup; href: string }> = ({
   );
 };
 
-const Navbar: FC<{ home?: boolean }> = ({ home = true }) => {
+const Navbar: FC = () => {
+  const pathname = usePathname();
   const { onToggle, open, onClose } = useDisclosure();
+  const home = pathname === content.nav.home.href;
   const internalLinks = home
     ? [
         content.nav.projects,
@@ -67,7 +70,7 @@ const Navbar: FC<{ home?: boolean }> = ({ home = true }) => {
       className={"hero-animation-durations hero-rest"}
       data-animated={home}
     >
-      <Link href={"/"}>
+      <Link href={content.nav.home.href}>
         <Image
           width={108}
           height={36}

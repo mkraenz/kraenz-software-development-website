@@ -1,7 +1,5 @@
-import Footer from "@/app/common/Footer";
-import Navbar from "@/app/common/Navbar";
 import { content } from "@/content";
-import { Grid, Heading, VStack } from "@chakra-ui/react";
+import { Heading, VStack } from "@chakra-ui/react";
 import { Metadata } from "next";
 import { FC } from "react";
 
@@ -763,13 +761,4 @@ export const metadata: Metadata = {
   },
 };
 
-const ImprintWithLayout = () => {
-  return (
-    <Grid templateRows={"var(--navbar-height) min-content min-content"} pb={4}>
-      <Navbar home={false} />
-      <Imprint />
-      <Footer />
-    </Grid>
-  );
-};
-export default ImprintWithLayout;
+export default Imprint;

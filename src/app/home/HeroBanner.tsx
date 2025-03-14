@@ -38,12 +38,18 @@ const HeroBanner = () => {
           {content.subsubHeading}
         </Heading>
       </VStack>
-      <HStack gap={8} className={"hero-rest"} data-animated>
+      <HStack
+        gap={8}
+        className={"hero-rest"}
+        flexWrap={"wrap"}
+        data-animated
+        justify={"center"}
+      >
         <Button
           textTransform={"uppercase"}
           fontWeight={"bold"}
           variant={"outline"}
-          minW={120}
+          minW={{ md: 120, base: "full" }}
           asChild
         >
           <Link
@@ -57,7 +63,7 @@ const HeroBanner = () => {
         <Button
           textTransform={"uppercase"}
           fontWeight={"bold"}
-          minW={180}
+          minW={{ md: 180, base: "full" }}
           asChild
         >
           <Link href={content.nav.contact.href}>{content.contact.title}</Link>

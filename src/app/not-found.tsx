@@ -17,7 +17,9 @@ const NotFound: FC = () => {
         width={{ base: "100%", md: "200px" }}
         mt={16}
       >
-        <Link href={"/"}>{content.notFound.backToHomeButton}</Link>
+        <Link href={content.nav.home.href}>
+          {content.notFound.backToHomeButton}
+        </Link>
       </Button>
     </VStack>
   );

@@ -1,7 +1,5 @@
-import Footer from "@/app/common/Footer";
-import Navbar from "@/app/common/Navbar";
 import { content } from "@/content";
-import { Button, Grid, Heading, Text, VStack } from "@chakra-ui/react";
+import { Button, Heading, Text, VStack } from "@chakra-ui/react";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -37,17 +35,4 @@ export const metadata: Metadata = {
   description: content.thankyou.meta.description,
 };
 
-const ThankyouWithLayout = () => {
-  return (
-    <Grid
-      templateRows={"var(--navbar-height) 1fr min-content"}
-      pb={4}
-      minH={"100vh"}
-    >
-      <Navbar home={false} />
-      <ThankyouPage />
-      <Footer />
-    </Grid>
-  );
-};
-export default ThankyouWithLayout;
+export default ThankyouPage;

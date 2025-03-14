@@ -1,6 +1,9 @@
 import { Provider } from "@/components/ui/provider";
 import { content } from "@/content";
+import { Grid } from "@chakra-ui/react";
 import type { Metadata } from "next";
+import Footer from "./common/Footer";
+import Navbar from "./common/Navbar";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,7 +20,17 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang={"en"}>
       <body>
-        <Provider>{children}</Provider>
+        <Provider>
+          <Grid
+            templateRows={"var(--navbar-height) 1fr min-content"}
+            pb={4}
+            minH={"100svh"}
+          >
+            <Navbar />
+            {children}
+            <Footer />
+          </Grid>
+        </Provider>
       </body>
     </html>
   );
