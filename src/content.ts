@@ -103,6 +103,8 @@ export const content = {
         "PostGIS",
         "Firebase",
         "Contentful CMS",
+        "Lokalise",
+        "i18next",
         "RevenueCat",
         "HubSpot",
         "Mixpanel",
@@ -126,6 +128,7 @@ export const content = {
         "AwS CloudFormation",
         "Docker",
         "Kubernetes",
+        "Bash",
         "SurveyJS",
         "Mapbox",
         "Nx",
@@ -358,6 +361,10 @@ export const content = {
       title: "Thank you!",
       description: "Thank you for reaching out to Mirco Kraenz",
     },
+  },
+  notFound: {
+    backToHomeButton: "Back to Home",
+    title: "404 Page Not Found",
   },
   privacyPolicy: {
     id: "privacy-policy",
