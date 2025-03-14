@@ -93,6 +93,7 @@ export const content = {
         "HTML 5",
         "Semantic & Accessible HTML",
         "CSS",
+        "Service Worker & PWA",
         "React Native",
         "Expo",
         "React Native Paper",
