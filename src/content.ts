@@ -1,5 +1,6 @@
 export const content = {
   htmlMeta: {
+    baseUrl: "https://kraenz.eu",
     title: "Mirco Kraenz - Full Stack Engineer - Available Now",
     description:
       "Looking for a Full Stack Engineer with 9+ years of industry experience to supplement your team? - Call Mirco Kraenz - Available for Contract Work",

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: content.htmlMeta.title,
   description: content.htmlMeta.description,
   keywords: content.htmlMeta.keywords,
+  metadataBase: new URL(content.htmlMeta.baseUrl),
 };
 
 export default function RootLayout({
