@@ -55,9 +55,9 @@ const Navbar: FC = () => {
   const home = pathname === content.nav.home.href;
   const internalLinks = home
     ? [
-        content.nav.projects,
-        // content.nav.mission,
         content.nav.services,
+        content.nav.testaments,
+        content.nav.projects,
         content.nav.contact,
       ]
     : [content.nav.home];

@@ -1,6 +1,8 @@
 :root {
   --color-scheme: light;
   --navbar-height: 48px;
+  --logo-color-dark: #0bd791;
+  --logo-color-light: #f50256;
 }
 
 [data-color-scheme="dark"] {
@@ -132,4 +134,14 @@ body {
 .slide-up[data-animated="true"] {
   opacity: 0;
   animation: slide-up-a-little 0.3s ease-in-out forwards;
+}
+
+[data-color-scheme="dark"] .testament-emphasis {
+  text-decoration: underline;
+  color: var(--logo-color-dark);
+}
+
+[data-color-scheme="light"] .testament-emphasis {
+  text-decoration: underline;
+  color: var(--logo-color-light);
 }

@@ -27,6 +27,7 @@ export const content = {
     home: { label: "Home", href: "/" },
     projects: { label: "Projects", href: "#projects" },
     mission: { label: "Mission", href: "#mission" },
+    testaments: { label: "Testimonials", href: "#testimonials" },
     services: { label: "Services", href: "#services" },
     contact: { label: "Contact", href: "#contact" },
     github: { label: "GitHub", href: "https://github.com/mkraenz/" },
@@ -50,7 +51,7 @@ export const content = {
     mailto: {
       // %0D%0A is an encoded line break
       href: "mailto:software@kraenz.eu?subject=Contact Request&body=Hi Mirco,%0D%0AMy name is YOUR_NAME.%0D%0AYour skills are a great fit for our team at YOUR_COMPANY_NAME.%0D%0ALets have a chat to discuss the details.%0D%0AMy phone number is YOUR_PHONE_NUMBER.%0D%0AThanks!",
-      label: "Send an Email",
+      label: "Send Email",
       description:
         "The easiest way to get in touch is by sending me an email. This helps avoid false positives during spam detection.",
       title: "Via Email",
@@ -70,9 +71,9 @@ export const content = {
     id: "services",
     title: "Services",
     subheading: "Freelance NodeJS Backend and React Frontend Development ",
-    description: `Looking for a Senior Fullstack Engineer with 9+ years of experience in the industry to supplement your team?`,
-    description2: `I have successfully written integrations with complex 3rd-party banking systems for Vestr where one mistake would have cost millions of Euro, kickstarted and scaled projects from scratch that reaches enterprise customers as for LiveEO's EUDR compliance solutions TradeAware built on top of AWS, as well as developed and maintained mobile apps with several thousand downloads with GIFTD.`,
-    description3: `I have experienced the power of great DevOps and, what I call, the 'heart of agile, lean, and devops' in action. For me, this is driven by values of Tangible Customer Value, System Thinking, Team Work, Openness, Courage, Ownership, and finally a desire to create a better and more just world. I am continuously helping teams to improve their workflows, and tools including setup and improvement of CI/CD pipelines, localization workflows, code reviews, moderating retrospectives, and mentoring.`,
+    description: `Looking for a Senior Fullstack Engineer with 9+ years of industry experience to supplement your team?`,
+    description2: `I have successfully written integrations with complex 3rd-party banking systems for Vestr where one mistake would have cost millions of Euro, kickstarted and scaled projects from scratch that reaches enterprise customers for LiveEO's EUDR compliance solutions TradeAware which is built on top of AWS, as well as developed and maintained mobile apps with several thousand downloads with GIFTD.`,
+    description3: `I have experienced the power of great DevOps and, what I call, the 'heart of agile, lean, and devops' in action. For me, this is driven by my values of Tangible Customer Value, System Thinking, Team Work, Openness, Courage, Ownership, and finally a desire to create a peaceful, more just, and sustainable future. I am continuously helping teams improve their workflows and tools like CI/CD pipelines, localization workflows, cross-department user onboarding flows, code reviews, and mentoring.`,
     cta: `Let's chat to find out how I can support you and your team.`,
     ctaButtonLabel: `Contact Now`,
     technologies: {
@@ -304,41 +305,91 @@ export const content = {
         techStack: [],
         teamSize: "1 person",
       },
+      // {
+      //   title: "Der Fürsorger",
+      //   imgAlt: "Fürsorger in-game view",
+      //   imgPath: "/latest-work/fursorger-in-game.png",
+      //   role: "Product Manager, Fullstack Developer, DevOps, Marketing, Mentor",
+      //   description: `Fantasy Puzzle & Logic Game. Developed by 2-persons team.
+      //               Inspired by the Star Trek: Voyager episode "Caretaker".`,
+      //   externalLink: "https://fursorger.now.sh/",
+      //   internalLink: "/recent-projects/fursorger",
+      //   techStack: ["TypeScript", "JavaScript", "Phaser3", "ZEIT Now", "HTML5"],
+      //   teamSize: "2 persons",
+      // },
+      // {
+      //   title: "Parvenu",
+      //   imgAlt: "Parvenu in-game view",
+      //   imgPath: "/latest-work/parvenu-in-game.png",
+      //   role: "Product Manager, Developer, DevOps, Mentor",
+      //   description: `Medieval economic simulation game prototype inspired by Patrician II.
+      //               Predecessor of Der Fursorger`,
+      //   externalLink: "https://mkraenz.github.io/parvenu/",
+      //   internalLink: "/recent-projects/parvenu",
+      //   techStack: [],
+      //   teamSize: "2 persons",
+      // },
+      // {
+      //   title: "Flappy Fly",
+      //   imgAlt: "Flappy Fly in-game view",
+      //   imgPath: "/latest-work/flappy-fly-in-game.png",
+      //   role: "Product Manager, Frontend Developer",
+      //   description: `Open-source clone of 2013's viral game Flappy Bird developed by Dong Nguyen.
+      //           Created fully with publicly licensed assets.`,
+      //   externalLink: "https://mkraenz.github.io/flappy-fly/",
+      //   internalLink: "/recent-projects/flappy-fly",
+      //   techStack: ["TypeScript", "JavaScript", "Phaser3", "HTML5"],
+      //   teamSize: "1 person",
+      // },
+    ],
+  },
+  testamonials: {
+    id: "testimonials",
+    title: "What Partners Say",
+    linkedInRecommendations: {
+      href: "https://www.linkedin.com/in/mkraenz/details/recommendations/",
+      label: "More on LinkedIn",
+    },
+    cards: [
       {
-        title: "Der Fürsorger",
-        imgAlt: "Fürsorger in-game view",
-        imgPath: "/latest-work/fursorger-in-game.png",
-        role: "Product Manager, Fullstack Developer, DevOps, Marketing, Mentor",
-        description: `Fantasy Puzzle & Logic Game. Developed by 2-persons team.
-                    Inspired by the Star Trek: Voyager episode "Caretaker".`,
-        externalLink: "https://fursorger.now.sh/",
-        internalLink: "/recent-projects/fursorger",
-        techStack: ["TypeScript", "JavaScript", "Phaser3", "ZEIT Now", "HTML5"],
-        teamSize: "2 persons",
+        name: "Eduardo Daniel Montenegro",
+        role: "Senior Software Engineer",
+        company: "LiveEO",
+        img: {
+          alt: "Profile image of Daniel Montenegro",
+          src: "/testaments/daniel-m.jpg",
+          width: 100,
+          height: 100,
+        },
+        quote: `When I started working at LiveEO <em class="testament-emphasis">Mirco already laid the foundation for the entire application, and he did an outstanding job</em>. His architecture was well-structured, making it easy to extend and maintain. Beyond that, he was always mindful of security and scalability, ensuring that we built solutions that were robust and future-proof.[..]<br /><br />
+
+It was a pleasure working with him in the back-end, and I would gladly do so again in the future. I highly recommend Mirco to any team looking for a strong and reliable engineer.`,
       },
       {
-        title: "Parvenu",
-        imgAlt: "Parvenu in-game view",
-        imgPath: "/latest-work/parvenu-in-game.png",
-        role: "Product Manager, Developer, DevOps, Mentor",
-        description: `Medieval economic simulation game prototype inspired by Patrician II. 
-                    Predecessor of Der Fursorger`,
-        externalLink: "https://mkraenz.github.io/parvenu/",
-        internalLink: "/recent-projects/parvenu",
-        techStack: [],
-        teamSize: "2 persons",
+        name: "Chris Bell",
+        role: "Product Manager",
+        company: "LiveEO",
+        img: {
+          alt: "Profile image of Chris Bell",
+          src: "/testaments/chris-b.jpg",
+          width: 100,
+          height: 100,
+        },
+        quote: `Mirco and I worked together on a greenfield project for LiveEO and his impact was immediate and extensive. His ability to connect and engage with the domain and the wider strategic questions behind the product <em class="testament-emphasis">really helped to ensure we made the right initial steps</em>. He then was able to work across a broad array of aspects of the project that needed to be set up from scratch to make this happen. I would gladly work with him again.`,
       },
       {
-        title: "Flappy Fly",
-        imgAlt: "Flappy Fly in-game view",
-        imgPath: "/latest-work/flappy-fly-in-game.png",
-        role: "Product Manager, Frontend Developer",
-        description: `Open-source clone of 2013's viral game Flappy Bird developed by Dong Nguyen. 
-                Created fully with publicly licensed assets.`,
-        externalLink: "https://mkraenz.github.io/flappy-fly/",
-        internalLink: "/recent-projects/flappy-fly",
-        techStack: ["TypeScript", "JavaScript", "Phaser3", "HTML5"],
-        teamSize: "1 person",
+        name: "Sven Mesecke",
+        role: "Product Manager",
+        company: "LiveEO",
+        img: {
+          alt: "Profile image of Sven Mesecke",
+          src: "/testaments/sven-m.jpg",
+          width: 100,
+          height: 100,
+        },
+        quote: `Mirco and I have worked together on an application that uses satellite imagery to detect deforestation in global supply chains. Mirco was part of my team since the start of this greenfield project and with his broad knowledge in the latest web technologies and in software engineering best practices, he has been extremely influential in shaping the application architecture and the technical roadmap. He goes far beyond mere implementation, he thinks and understands deeply the problem domain and shapes solutions based on this deep understanding.<br/><br/>
+
+<em class="testament-emphasis">We have extended our contract with Mirco again and again</em> and I can highly recommend Mirco in any FullStack or DevOps role and would always work with him again.`,
       },
     ],
   },
@@ -373,15 +424,20 @@ export const content = {
   imprint: {
     canonicalTag: "https://kraenz.eu/imprint",
     images: [
+      { filename: "liveeo-min.png", owner: "LiveEO GmbH" },
       { filename: "liveeo-white-text.svg", owner: "LiveEO GmbH" },
       { filename: "liveeo-black-text.svg", owner: "LiveEO GmbH" },
       { filename: "giftd.png", owner: "GIFTD GmbH" },
+      { filename: "myralytik", owner: "myralytik healthcare consulting GmbH" },
       { filename: "coachhub-logo.svg", owner: "CoachHub GmbH" },
       { filename: "vestr.svg", owner: "vestr AG" },
       { filename: "awesome-app-logo.png", owner: "Mirco Kraenz" },
       { filename: "parvenu-in-game.png", owner: "Mirco Kraenz" },
       { filename: "fursorger-in-game.png", owner: "Mirco Kraenz" },
       { filename: "flappy-fly-in-game.png", owner: "Mirco Kraenz" },
+      { filename: "chris-b.jpg", owner: "Chris Bell" },
+      { filename: "daniel-m.jpg", owner: "Daniel Montenegro" },
+      { filename: "sven-m.jpg", owner: "Sven Mesecke" },
     ],
   },
   meta: {

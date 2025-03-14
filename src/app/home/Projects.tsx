@@ -13,7 +13,7 @@ const Projects = () => {
       pb={16}
       id={content.latestWork.id}
       minH={"100svh"}
-      as={"article"}
+      as={"section"}
     >
       <Heading
         as={"h2"}

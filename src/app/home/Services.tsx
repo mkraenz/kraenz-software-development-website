@@ -10,7 +10,6 @@ const Services = () => {
   const techsInView = useInView(0.25);
   return (
     <VStack
-      as={"article"}
       gap={16}
       minH={"100svh"}
       maxW={{ base: "100%", md: "70%" }}
