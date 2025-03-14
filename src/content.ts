@@ -153,7 +153,6 @@ export const content = {
         "Sentry",
         "SocketIO & Websockets",
         "LauchDarkly",
-        "Lokalise",
         "Heroku",
         "Platform.sh",
         "Nylas",
