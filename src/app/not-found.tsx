@@ -5,7 +5,7 @@ import { content } from "../content";
 
 const NotFound: FC = () => {
   return (
-    <VStack as={"main"} justify={"center"} h={"100svh"}>
+    <VStack as={"main"} justify={"center"} h={"100svh"} px={8}>
       <Heading as={"h1"} size={"5xl"}>
         {content.notFound.title}
       </Heading>
