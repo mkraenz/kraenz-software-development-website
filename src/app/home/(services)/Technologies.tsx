@@ -20,7 +20,6 @@ const tagToColor: Record<TechTag, string> = {
   devops: "green",
   frontend: "cyan",
   mobile: "orange",
-  other: "red",
 };
 
 const Technologies: FC = () => {
