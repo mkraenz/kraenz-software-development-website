@@ -33,6 +33,7 @@ const ThankyouPage = () => {
 export const metadata: Metadata = {
   title: content.thankyou.meta.title,
   description: content.thankyou.meta.description,
+  robots: "noindex",
 };
 
 export default ThankyouPage;

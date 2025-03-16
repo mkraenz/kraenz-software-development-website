@@ -759,6 +759,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: content.imprint.canonicalTag,
   },
+  robots: "noindex,nofollow",
 };
 
 export default Imprint;
