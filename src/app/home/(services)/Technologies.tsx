@@ -15,10 +15,10 @@ import {
 import { FC, useState } from "react";
 
 const tagToColor: Record<TechTag, string> = {
-  "3rdparty": "purple",
-  backend: "blue",
-  devops: "green",
-  frontend: "cyan",
+  "3rdparty": "teal",
+  backend: "green",
+  devops: "purple",
+  frontend: "blue",
   mobile: "orange",
 };
 
@@ -83,7 +83,7 @@ const Technologies: FC = () => {
         {techs.map(({ name, tags }) => (
           <Badge
             key={name}
-            background={`${tagToColor[tags[0]]}.muted`}
+            background={`rgb(from {colors.${tagToColor[tags[0]]}.muted} r g b / 0.7)`}
             transition={"0.3s"}
             _hover={{ transform: "scale(1.1)" }}
             userSelect={"all"}

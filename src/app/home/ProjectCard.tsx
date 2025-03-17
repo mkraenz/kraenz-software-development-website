@@ -28,6 +28,8 @@ const ProjectCard: FC<{
         display={"grid"}
         gridTemplateRows={"140px 264px"}
         pt={4}
+        transition={"0.3s"}
+        _hover={{ scale: 1.1 }}
       >
         <Card.Header position={"relative"} mx={4}>
           <Image
