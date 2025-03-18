@@ -1,0 +1,33 @@
+{
+  "name": "Mirco Kraenz Full Stack Engineer",
+  "short_name": "Mirco Kraenz",
+  "description": "Mirco Kraenz - Full Stack Engineer - Backend Focus - Available Now",
+  "id": "kraenz.eu/?homescreen=1",
+  "start_url": "/",
+  "lang": "en",
+  "scope": "/",
+  "theme_color": "#F50057",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "categories": ["developer", "business", "development"],
+  "icons": [
+    {
+      "src": "/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon/maskable-solid-icon-512-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

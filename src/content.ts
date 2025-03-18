@@ -10,7 +10,7 @@ export type TechTag = (typeof techTags)[number];
 export const content = {
   htmlMeta: {
     baseUrl: "https://kraenz.eu",
-    title: "Mirco Kraenz - Full Stack Engineer - Available Now",
+    title: "Mirco Kraenz - Full Stack Engineer - Backend Focus - Available Now",
     description:
       "Looking for a Full Stack Engineer with 9+ years of industry experience to supplement your team? - Call Mirco Kraenz - Available for Contract Work",
     keywords:
@@ -18,7 +18,7 @@ export const content = {
   },
   // for emails, see sendEmail.ts
   heading: "Awesomeness for your Web\u00A0App",
-  subHeading: "Mirco Kraenz • Full Stack Engineer",
+  subHeading: "Mirco Kraenz • Full Stack Engineer • Backend Focus",
   subsubHeading: "Available for Contract Work",
   academicDegree: "M.Sc. Mathematics",
   landingPageSecondaryButton: "CV on LinkedIn",
@@ -132,6 +132,8 @@ export const content = {
           tags: ["backend", "frontend", "devops", "3rdparty"],
         },
         { name: "Contentful CMS", tags: ["backend", "3rdparty"] },
+        { name: "Sendgrid Email", tags: ["backend", "3rdparty"] },
+        { name: "FTP & SFTP", tags: ["backend"] },
         {
           name: "Lokalise",
           tags: ["frontend", "backend", "devops", "3rdparty"],
@@ -196,7 +198,7 @@ export const content = {
           name: "LaunchDarkly",
           tags: ["frontend", "backend", "3rdparty", "devops"],
         },
-        { name: "Heroku", tags: ["frontend", "backend", "3rdparty", "devops"] },
+        { name: "Heroku", tags: ["devops", "frontend", "backend", "3rdparty"] },
         { name: "Platform.sh", tags: ["backend", "3rdparty", "devops"] },
         { name: "Nylas Calendar Sync", tags: ["backend", "3rdparty"] },
         { name: "Vonage Communications API", tags: ["backend", "3rdparty"] },
