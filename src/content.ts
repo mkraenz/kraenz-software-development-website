@@ -17,7 +17,7 @@ export const content = {
       "full stack developer, full stack engineer, full stack entwickler, fintech, nodejs backend developer, typescript, Nodejs, fullstack, berlin typescript entwickler, typescript freelancer, typescript freiberufler, javascript, nestjs, software engineer, full stack engineer",
   },
   // for emails, see sendEmail.ts
-  heading: "Awesomeness for your Web\u00A0App",
+  heading: "Product & Engineering Reunited",
   subHeading: "Mirco Kraenz • Full Stack Engineer • Backend Focus",
   subsubHeading: "Available for Contract Work",
   academicDegree: "M.Sc. Mathematics",
