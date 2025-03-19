@@ -473,7 +473,7 @@ It was a pleasure working with him in the back-end, and I would gladly do so aga
     ],
   },
   meta: {
-    homeCanonicalTag: "https://kraenz.com/",
+    homeCanonicalTag: "https://kraenz.eu/",
     keywords:
       "full stack developer, full stack entwickler, fintech, nodejs backend developer, typescript, Nodejs, fullstack, berlin typescript entwickler, typescript freelancer, typescript freiberufler, deutschland",
     description:
