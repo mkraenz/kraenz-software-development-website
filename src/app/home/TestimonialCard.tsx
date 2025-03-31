@@ -2,22 +2,25 @@
 
 import AvatarWithText from "@/components/ui/avatar-with-text";
 import { content } from "@/content";
+import { useFadeInOnScroll } from "@/hooks/useFadeInOnScroll";
 import { useInView } from "@/hooks/useInView";
 import { HStack, Separator, Text, VStack } from "@chakra-ui/react";
 import { FC } from "react";
 
 type Props = {
-  testamonial: (typeof content.testamonials.cards)[number];
+  testimonial: (typeof content.testimonials.cards)[number];
   index: number;
   gap: number;
 };
 
-const TestamonialCard: FC<Props> = ({ testamonial, index, gap }) => {
+const TestimonialCard: FC<Props> = ({ testimonial, index, gap }) => {
   const { ref, inView } = useInView(0.5);
   const even = index % 2 === 0;
 
+  const fadeProps = useFadeInOnScroll(inView);
+
   return (
-    <VStack ref={ref} data-animated={inView} className={"slide-up"} gap={gap}>
+    <VStack ref={ref} gap={gap} {...fadeProps}>
       {index !== 0 && (
         <Separator
           variant={"solid"}
@@ -34,17 +37,17 @@ const TestamonialCard: FC<Props> = ({ testamonial, index, gap }) => {
         flexDir={even ? "row" : "row-reverse"}
       >
         <AvatarWithText
-          testamonial={testamonial}
+          testimonial={testimonial}
           flexDir={{ md: "column", base: even ? "row" : "row-reverse" }}
         />
         <Text
           as={"blockquote"}
           maxW={"xl"}
-          dangerouslySetInnerHTML={{ __html: testamonial.quote }}
+          dangerouslySetInnerHTML={{ __html: testimonial.quote }}
         ></Text>
       </HStack>
     </VStack>
   );
 };
 
-export default TestamonialCard;
+export default TestimonialCard;

@@ -132,7 +132,6 @@ body {
   opacity: 0;
 }
 .slide-up[data-animated="true"] {
-  opacity: 0;
   animation: slide-up-a-little 0.3s ease-in-out forwards;
 }
 

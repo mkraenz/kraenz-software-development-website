@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import Footer from "./common/Footer";
 import Navbar from "./common/Navbar";
 import "./globals.css";
+import { ScrollProvider } from "@/contexts/ScrollContext";
 
 export const metadata: Metadata = {
   title: content.htmlMeta.title,
@@ -22,15 +23,17 @@ export default function RootLayout({
     <html suppressHydrationWarning lang={"en"}>
       <body>
         <Provider>
-          <Grid
-            templateRows={"var(--navbar-height) 1fr min-content"}
-            pb={4}
-            minH={"100svh"}
-          >
-            <Navbar />
-            {children}
-            <Footer />
-          </Grid>
+          <ScrollProvider>
+            <Grid
+              templateRows={"var(--navbar-height) 1fr min-content"}
+              pb={4}
+              minH={"100svh"}
+            >
+              <Navbar />
+              {children}
+              <Footer />
+            </Grid>
+          </ScrollProvider>
         </Provider>
       </body>
     </html>
