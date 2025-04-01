@@ -1,6 +1,7 @@
 "use client";
 
 import { content } from "@/content";
+import { useFadeInOnScroll } from "@/hooks/useFadeInOnScroll";
 import { useInView } from "@/hooks/useInView";
 import { Button, Heading, Text, VStack } from "@chakra-ui/react";
 import Link from "next/link";
@@ -9,14 +10,10 @@ import { FC } from "react";
 const ServiceOffer: FC = () => {
   const servicesInView = useInView(0.25);
 
+  const fadeProps = useFadeInOnScroll(servicesInView.inView);
+
   return (
-    <VStack
-      as={"section"}
-      ref={servicesInView.ref}
-      className={"slide-up"}
-      data-animated={servicesInView.inView}
-      gap={4}
-    >
+    <VStack as={"section"} ref={servicesInView.ref} gap={4} {...fadeProps}>
       <Heading
         as={"h2"}
         size={{ base: "5xl", md: "7xl" }}

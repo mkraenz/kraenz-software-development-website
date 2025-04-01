@@ -1,6 +1,7 @@
 "use client";
 
 import { content } from "@/content";
+import { useFadeInOnScroll } from "@/hooks/useFadeInOnScroll";
 import { useInView } from "@/hooks/useInView";
 import { Card, VStack } from "@chakra-ui/react";
 import Image from "next/image";
@@ -12,15 +13,16 @@ const ProjectCard: FC<{
 }> = ({ project }) => {
   const { ref, inView } = useInView(0.5);
 
+  const fadeProps = useFadeInOnScroll(inView);
+
   return (
     <Link
       href={project.externalLink}
       key={project.title}
-      className={"project-grid-item slide-up"}
       target={"_blank"}
       rel={"noopener noreferrer"}
-      data-animated={inView}
       ref={ref}
+      className={"project-grid-item"}
     >
       <Card.Root
         variant={"elevated"}
@@ -30,6 +32,7 @@ const ProjectCard: FC<{
         pt={4}
         transition={"0.3s"}
         _hover={{ scale: 1.1 }}
+        {...fadeProps}
       >
         <Card.Header position={"relative"} mx={4}>
           <Image

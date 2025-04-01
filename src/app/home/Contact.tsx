@@ -5,10 +5,14 @@ import { useInView } from "@/hooks/useInView";
 import { Grid, Heading, VStack } from "@chakra-ui/react";
 import ContactForm from "./ContactForm";
 import ContactMailTo from "./ContactMailTo";
+import { useFadeInOnScroll } from "@/hooks/useFadeInOnScroll";
 
 const Contact = () => {
   // not sure why but putting inView on the root VStack of this component, I get a double scrollbar when scrolling down to Contact. Moving it to the children of the root VStack fixes this.
   const inView = useInView(0.25);
+
+  const fadeProps = useFadeInOnScroll(inView.inView);
+
   return (
     <VStack
       gap={8}
@@ -17,11 +21,7 @@ const Contact = () => {
       as={"article"}
       id={content.contact.id}
     >
-      <VStack
-        ref={inView.ref}
-        className={"slide-up"}
-        data-animated={inView.inView}
-      >
+      <VStack ref={inView.ref} {...fadeProps}>
         <Heading
           as={"h2"}
           size={{ base: "5xl", md: "7xl" }}
@@ -40,8 +40,7 @@ const Contact = () => {
         }}
         gap={16}
         ref={inView.ref}
-        className={"slide-up"}
-        data-animated={inView.inView}
+        {...fadeProps}
       >
         <ContactMailTo />
         <ContactForm />

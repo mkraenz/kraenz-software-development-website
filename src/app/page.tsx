@@ -5,7 +5,7 @@ import Contact from "./home/Contact";
 import HeroBanner from "./home/HeroBanner";
 import Projects from "./home/Projects";
 import Services from "./home/Services";
-import Testamonials from "./home/Testamonial";
+import Testimonials from "./home/Testimonial";
 import SeoSchemaMarkup from "./SchemaMarkup";
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ const HomePage = () => {
       <VStack as={"main"} px={{ md: 12, base: 4 }}>
         <HeroBanner />
         <Services />
-        <Testamonials />
+        <Testimonials />
         <Projects />
         <Contact />
       </VStack>

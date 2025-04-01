@@ -4,24 +4,24 @@ import { StackProps, Text, VStack } from "@chakra-ui/react";
 import { FC } from "react";
 
 type Props = {
-  testamonial: (typeof content.testamonials.cards)[number];
+  testimonial: (typeof content.testimonials.cards)[number];
   flexDir?: StackProps["flexDir"];
 };
 
-const AvatarWithText: FC<Props> = ({ testamonial, flexDir }) => {
+const AvatarWithText: FC<Props> = ({ testimonial, flexDir }) => {
   return (
     <VStack as={"figure"} flexDir={flexDir} gapX={4}>
       <Avatar
-        name={testamonial.name}
-        src={testamonial.img.src}
-        alt={testamonial.img.alt}
+        name={testimonial.name}
+        src={testimonial.img.src}
+        alt={testimonial.img.alt}
         size={"2xl"}
       ></Avatar>
       <Text as={"figcaption"} textAlign={"center"}>
-        {testamonial.name}
+        {testimonial.name}
         <br />
         <Text color={"dimgray"}>
-          {testamonial.role} / {testamonial.company}
+          {testimonial.role} / {testimonial.company}
         </Text>
       </Text>
     </VStack>

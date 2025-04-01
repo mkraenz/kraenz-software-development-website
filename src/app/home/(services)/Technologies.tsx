@@ -2,6 +2,7 @@
 
 import Searchbar from "@/components/ui/searchbar";
 import { content, TechTag, techTags } from "@/content";
+import { useFadeInOnScroll } from "@/hooks/useFadeInOnScroll";
 import { useInView } from "@/hooks/useInView";
 import {
   Badge,
@@ -24,8 +25,12 @@ const tagToColor: Record<TechTag, string> = {
 
 const Technologies: FC = () => {
   const techsInView = useInView(0.25);
+
   const [filter, setFilter] = useState<TechTag>();
   const [search, setSearch] = useState("");
+
+  const fadeProps = useFadeInOnScroll(techsInView.inView);
+
   const reset = () => {
     setFilter(undefined);
     setSearch("");
@@ -43,13 +48,7 @@ const Technologies: FC = () => {
 
   const theContent = content.services.technologies;
   return (
-    <VStack
-      as={"section"}
-      ref={techsInView.ref}
-      className={"slide-up"}
-      data-animated={techsInView.inView}
-      gap={8}
-    >
+    <VStack as={"section"} ref={techsInView.ref} gap={8} {...fadeProps}>
       <Heading as={"h4"} size={"3xl"}>
         {theContent.heading}
       </Heading>

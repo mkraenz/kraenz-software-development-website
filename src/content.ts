@@ -375,7 +375,7 @@ export const content = {
       // },
     ],
   },
-  testamonials: {
+  testimonials: {
     id: "testimonials",
     title: "What Partners Say",
     linkedInRecommendations: {

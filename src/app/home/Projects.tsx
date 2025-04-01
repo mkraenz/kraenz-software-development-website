@@ -4,9 +4,13 @@ import { content } from "@/content";
 import { useInView } from "@/hooks/useInView";
 import { Grid, Heading, VStack } from "@chakra-ui/react";
 import ProjectCard from "./ProjectCard";
+import { useFadeInOnScroll } from "@/hooks/useFadeInOnScroll";
 
 const Projects = () => {
   const headingInView = useInView(0.75);
+
+  const fadeProps = useFadeInOnScroll(headingInView.inView);
+
   return (
     <VStack
       gap={16}
@@ -20,8 +24,7 @@ const Projects = () => {
         size={{ base: "5xl", md: "7xl" }}
         textAlign={"center"}
         ref={headingInView.ref}
-        className={"slide-up"}
-        data-animated={headingInView.inView}
+        {...fadeProps}
       >
         {content.latestWork.title}
       </Heading>
