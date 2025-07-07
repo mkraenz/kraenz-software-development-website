@@ -134,6 +134,8 @@ export const content = {
         { name: "Contentful CMS", tags: ["backend", "3rdparty"] },
         { name: "Sendgrid Email", tags: ["backend", "3rdparty"] },
         { name: "FTP & SFTP", tags: ["backend"] },
+        { name: "Python", tags: ["backend"] },
+        { name: "FastAPI", tags: ["backend"] },
         {
           name: "Lokalise",
           tags: ["frontend", "backend", "devops", "3rdparty"],
@@ -396,6 +398,24 @@ export const content = {
         quote: `When I started working at LiveEO <em class="testament-emphasis">Mirco already laid the foundation for the entire application, and he did an outstanding job</em>. His architecture was well-structured, making it easy to extend and maintain. Beyond that, he was always mindful of security and scalability, ensuring that we built solutions that were robust and future-proof.[..]<br /><br />
 
 It was a pleasure working with him in the back-end, and I would gladly do so again in the future. I highly recommend Mirco to any team looking for a strong and reliable engineer.`,
+      },
+      {
+        name: "Michael Gegg",
+        role: "CTO",
+        company: "GIFTD",
+        img: {
+          alt: "Profile image of Michael Gegg",
+          src: "/testaments/michael-g.jpg",
+          width: 100,
+          height: 100,
+        },
+        quote: `He [Mirco] profoundly shaped the overall tech stack of our company: modernizing our tooling, migrating the app to typescript, building our CI/CD pipeline from scratch as well as implementing our In App Purchases/Subscription feature and more. He was also taking over the <em class="testament-emphasis">main tech responsibility of the company during my parental leave.</em> [...]
+        <br />
+        <br />
+        He has a very wholistic approach, he is interested in the business side, the team culture, and other aspects beyond just development. He brings his own ideas and recommendations to improve processes from this broad perspective. As a founder, I cannot stress enough how much of a relief it was to have someone like Mirco on our team, a person that sees projects to the end and is <em class="testament-emphasis">genuinely interested in helping your organization as a whole</em>.
+        <br />
+        <br />
+        We extended his contract multiple times, and he remains connected to us as an advisor. I highly recommend Mirco as a developer (React Native, Fullstack) and as a person.`,
       },
       {
         name: "Chris Bell",

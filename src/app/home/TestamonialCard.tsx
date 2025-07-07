@@ -21,7 +21,6 @@ const TestamonialCard: FC<Props> = ({ testamonial, index, gap }) => {
       {index !== 0 && (
         <Separator
           variant={"solid"}
-          color={"red"}
           size={"lg"}
           width={"full"}
           rotate={!even ? "4deg" : "-4deg"}
