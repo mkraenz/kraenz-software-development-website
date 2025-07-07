@@ -36,7 +36,7 @@ export const content = {
     home: { label: "Home", href: "/" },
     projects: { label: "Projects", href: "#projects" },
     mission: { label: "Mission", href: "#mission" },
-    testaments: { label: "Testimonials", href: "#testimonials" },
+    testamonials: { label: "Testimonials", href: "#testimonials" },
     services: { label: "Services", href: "#services" },
     contact: { label: "Contact", href: "#contact" },
     github: { label: "GitHub", href: "https://github.com/mkraenz/" },
@@ -391,7 +391,7 @@ export const content = {
         company: "LiveEO",
         img: {
           alt: "Profile image of Daniel Montenegro",
-          src: "/testaments/daniel-m.jpg",
+          src: "/testamonials/daniel-m.jpg",
           width: 100,
           height: 100,
         },
@@ -405,7 +405,7 @@ It was a pleasure working with him in the back-end, and I would gladly do so aga
         company: "GIFTD",
         img: {
           alt: "Profile image of Michael Gegg",
-          src: "/testaments/michael-g.jpg",
+          src: "/testamonials/michael-g.jpg",
           width: 100,
           height: 100,
         },
@@ -423,7 +423,7 @@ It was a pleasure working with him in the back-end, and I would gladly do so aga
         company: "LiveEO",
         img: {
           alt: "Profile image of Chris Bell",
-          src: "/testaments/chris-b.jpg",
+          src: "/testamonials/chris-b.jpg",
           width: 100,
           height: 100,
         },
@@ -435,7 +435,7 @@ It was a pleasure working with him in the back-end, and I would gladly do so aga
         company: "LiveEO",
         img: {
           alt: "Profile image of Sven Mesecke",
-          src: "/testaments/sven-m.jpg",
+          src: "/testamonials/sven-m.jpg",
           width: 100,
           height: 100,
         },

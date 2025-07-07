@@ -56,7 +56,7 @@ const Navbar: FC = () => {
   const internalLinks = home
     ? [
         content.nav.services,
-        content.nav.testaments,
+        content.nav.testamonials,
         content.nav.projects,
         content.nav.contact,
       ]
