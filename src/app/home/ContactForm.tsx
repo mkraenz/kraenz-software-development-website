@@ -21,6 +21,7 @@ const SubmitButton = () => {
       type={"submit"}
       width={{ base: "full", md: "200px" }}
       loading={pending}
+      disabled={true}
     >
       {content.contact.form.submit}
     </Button>
@@ -41,7 +42,15 @@ const ContactForm = () => {
         <Fieldset.Content>
           <Field label={content.contact.form.name}>
             <InputGroup flex={"1"} w={"100%"} startElement={<LuUser />}>
-              <Input name={"name"} autoComplete={"name"} required />
+              <Input
+                name={"name"}
+                autoComplete={"name"}
+                required
+                value={
+                  "Please use E-Mail instead. Temporarily disabled due to spam. "
+                }
+                disabled
+              />
             </InputGroup>
           </Field>
 
@@ -51,7 +60,12 @@ const ContactForm = () => {
               w={"100%"}
               startElement={<LuBriefcaseBusiness />}
             >
-              <Input name={"company"} autoComplete={"organization"} required />
+              <Input
+                name={"company"}
+                autoComplete={"organization"}
+                required
+                disabled
+              />
             </InputGroup>
           </Field>
 
@@ -62,6 +76,7 @@ const ContactForm = () => {
                 type={"email"}
                 autoComplete={"email"}
                 required
+                disabled
               />
             </InputGroup>
           </Field>
@@ -72,7 +87,7 @@ const ContactForm = () => {
               w={"100%"}
               startElement={<LuMessageSquare />}
             >
-              <Input name={"message"} />
+              <Input name={"message"} disabled />
             </InputGroup>
           </Field>
         </Fieldset.Content>
